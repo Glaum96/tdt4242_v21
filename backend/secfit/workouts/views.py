@@ -232,9 +232,8 @@ class Leaderboards(
     permission_classes = [permissions.IsAuthenticated]
     
     def get(self, request, *args, **kwargs):
-        path = self.request.path
-        e_id = path.split("/")[-2]
-        
+        e_id = self.kwargs.get("pk")
+
         if self.request.user:
     
             leaderboardNumbers = ExerciseInstance.objects.filter(Q(exercise__pk=e_id) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField())).order_by('-amount')
