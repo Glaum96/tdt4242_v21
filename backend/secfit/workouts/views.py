@@ -35,6 +35,7 @@ from collections import namedtuple
 import base64, pickle
 from django.core.signing import Signer
 
+from users.models import User
 
 @api_view(["GET"])
 def api_root(request, format=None):
