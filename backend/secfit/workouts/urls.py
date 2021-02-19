@@ -31,7 +31,7 @@ urlpatterns = format_suffix_patterns(
             "api/leaderboards/",
             views.Leaderboards.as_view(),
             name="leaderboards",
-        )
+        ),
         path(
             "api/exercise-instances/<int:pk>/",
             views.ExerciseInstanceDetail.as_view(),
