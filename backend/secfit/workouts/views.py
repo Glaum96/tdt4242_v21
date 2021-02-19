@@ -204,12 +204,16 @@ class ExerciseDetail(
 
     HTTP methods: GET, PUT, PATCH, DELETE
     """
-
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
+        print("heiheihei")
+        print(request.data)
+        print(request.query_params)
+        print(request.GET)
+        print(request.path)
         return self.retrieve(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):
@@ -220,6 +224,21 @@ class ExerciseDetail(
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+class Leaderboards(
+    mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    generics.GenericAPIView,
+    ):
+
+    def get(self, request, *args, **kwargs):
+        path = request.path
+        exercise_id = path.split("/")[-1]
+        print(exercise_id)
+        #ExerciseInstance.objects.filter(Q(exercise__pk=1) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField()))
+        
+        return {"hei":"Haakon"}
 
 
 class ExerciseInstanceList(
