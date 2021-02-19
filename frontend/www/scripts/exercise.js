@@ -123,7 +123,7 @@ async function updateExercise(id) {
 }
 
 async function fetchLeaderBoards() {
-    //let response = await sendRequest("GET", `${HOST}/api/exercises/${id}/getLeaderBoards`);
+    //let response = await sendRequest("GET", `${HOST}/api/leaderboards/${id}`);
     //Placeholder response and status:
     let response = [{"name": "Mark", "value": 301, "rank": 1},
     {"name": "Anton", "value": 245, "rank": 2},
