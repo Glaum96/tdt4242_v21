@@ -28,6 +28,11 @@ urlpatterns = format_suffix_patterns(
             name="exercise-instance-list",
         ),
         path(
+            "api/leaderboards/<int:pk>/",
+            views.Leaderboards.as_view(),
+            name="leaderboards",
+        ),
+        path(
             "api/exercise-instances/<int:pk>/",
             views.ExerciseInstanceDetail.as_view(),
             name="exerciseinstance-detail",

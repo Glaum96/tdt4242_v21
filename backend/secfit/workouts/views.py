@@ -6,10 +6,11 @@ from rest_framework import permissions
 from rest_framework.parsers import (
     JSONParser,
 )
+import json
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from django.db.models import Q
+from django.db.models import Q, Sum, F, IntegerField
 from rest_framework import filters
 from workouts.parsers import MultipartJsonParser
 from workouts.permissions import (
@@ -33,6 +34,9 @@ import json
 from collections import namedtuple
 import base64, pickle
 from django.core.signing import Signer
+
+from users.models import User
+from rest_framework.views import APIView
 
 
 @api_view(["GET"])
@@ -204,7 +208,6 @@ class ExerciseDetail(
 
     HTTP methods: GET, PUT, PATCH, DELETE
     """
-
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -220,6 +223,43 @@ class ExerciseDetail(
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+class Leaderboards(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get(self, request, pk):
+
+        # User must be logged in
+        if self.request.user:
+    
+            leaderboardNumbers = ExerciseInstance.objects.filter(Q(exercise__pk=pk) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField())).order_by('-amount')
+    
+            leaderboardResult = []
+    
+            # Iterates through the top 5 entries in the leaderboard and formats it correctly
+            for i in range(0, min(5, len(leaderboardNumbers))):
+                leaderboardResult.append({"name": User.objects.get(pk=leaderboardNumbers[i]['workout__owner__pk']).username, "value": leaderboardNumbers[i]['amount']})
+    
+                # Applies the rank to the leaderboard entry; if two or more users have the score they get the same rank
+                if i > 0 and leaderboardNumbers[i-1]["amount"] == leaderboardNumbers[i]["amount"]:
+                    leaderboardResult[i]["rank"] = leaderboardResult[i-1]["rank"]
+                else:
+                    leaderboardResult[i]["rank"] = i+1
+    
+            # Finds the user in the leaderboard list. If the user is not in the leaderboard list,
+            # the user is automatically given a score of 0 and the worst rank
+
+            currentLoggedInUser = self.request.user
+    
+            for j in range(0, len(leaderboardNumbers)):
+                if leaderboardNumbers[j]['workout__owner__pk'] == currentLoggedInUser.pk:
+                    leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
+                    break
+            else:
+                leaderboardResult.append({"name": currentLoggedInUser.username, "value": 0, "rank": len(leaderboardNumbers) + 1})
+
+            return Response(leaderboardResult)
 
 
 class ExerciseInstanceList(
