@@ -36,6 +36,8 @@ import base64, pickle
 from django.core.signing import Signer
 
 from users.models import User
+from rest_framework.views import APIView
+
 
 @api_view(["GET"])
 def api_root(request, format=None):
@@ -222,21 +224,16 @@ class ExerciseDetail(
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
 
-class Leaderboards(
-    mixins.RetrieveModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.DestroyModelMixin,
-    generics.GenericAPIView,
-    ):
+class Leaderboards(APIView):
 
     permission_classes = [permissions.IsAuthenticated]
     
-    def get(self, request, *args, **kwargs):
-        e_id = self.kwargs.get("pk")
+    def get(self, request, pk):
 
+        # User must be logged in
         if self.request.user:
     
-            leaderboardNumbers = ExerciseInstance.objects.filter(Q(exercise__pk=e_id) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField())).order_by('-amount')
+            leaderboardNumbers = ExerciseInstance.objects.filter(Q(exercise__pk=pk) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField())).order_by('-amount')
     
             leaderboardResult = []
     
@@ -261,8 +258,8 @@ class Leaderboards(
                     break
             else:
                 leaderboardResult.append({"name": currentLoggedInUser.username, "value": 0, "rank": len(leaderboardNumbers) + 1})
-            
-            return Response(json.dumps(leaderboardResult))
+
+            return Response(leaderboardResult)
 
 
 class ExerciseInstanceList(
