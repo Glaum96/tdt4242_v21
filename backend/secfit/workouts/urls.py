@@ -33,6 +33,11 @@ urlpatterns = format_suffix_patterns(
             name="leaderboards",
         ),
         path(
+            "api/workoutLiking/<int:pk>/",
+            views.WorkoutLiking.as_view(),
+            name="WorkoutLiking",
+        ),
+        path(
             "api/exercise-instances/<int:pk>/",
             views.ExerciseInstanceDetail.as_view(),
             name="exerciseinstance-detail",
