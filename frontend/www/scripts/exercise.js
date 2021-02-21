@@ -125,49 +125,41 @@ async function updateExercise(id) {
   }
 }
 
-async function fetchLeaderBoards() {
+async function fetchLeaderBoards(id) {
+
+  // Fetches leaderboard data
   let response = await sendRequest("GET", `${HOST}/api/leaderboards/${id}/`);
-  console.log(response.ok);
-  //Placeholder response and status:
-  let response = [
-    { name: "Mark", value: 301, rank: 1 },
-    { name: "Anton", value: 245, rank: 2 },
-    { name: "John", value: 112, rank: 3 },
-    { name: "Joe", value: 84, rank: 4 },
-    { name: "Larry", value: 80, rank: 5 },
-    { name: "Glaum", value: 1, rank: 85 },
-  ];
-  response.ok = true;
+  let data = await response.json();
 
   if (response.ok) {
     let table = document.getElementById("leaderboardstable");
     let row, cell;
 
-    //The users own score will always be placed last in the JSON response
-    let userIndex = response.length - 1;
+    //The user's own score will always be placed last in the JSON response
+    let userIndex = data.length - 1;
 
-    for (let i = 0; i < response.length - 1; i++) {
+    for (let i = 0; i < data.length - 1; i++) {
       row = table.insertRow();
       cell = row.insertCell();
-      cell.textContent = response[i].rank;
+      cell.textContent = data[i].rank;
       cell = row.insertCell();
-      cell.textContent = response[i].name;
+      cell.textContent = data[i].name;
       cell = row.insertCell();
-      cell.textContent = response[i].value;
+      cell.textContent = data[i].value;
     }
     //If the user is not in top 5, the users score will also be rendered
-    if (response[userIndex].rank > 5) {
+    if (data[userIndex].rank > 5) {
       row = table.insertRow();
       cell = row.insertCell();
-      cell.textContent = response[userIndex].rank;
+      cell.textContent = data[userIndex].rank;
       cell = row.insertCell();
-      cell.textContent = response[userIndex].name;
+      cell.textContent = data[userIndex].name;
       cell = row.insertCell();
-      cell.textContent = response[userIndex].value;
+      cell.textContent = data[userIndex].value;
     }
   }
 
-  return response;
+  return data;
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -183,6 +175,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (urlParams.has("id")) {
     const exerciseId = urlParams.get("id");
     await retrieveExercise(exerciseId);
+    await fetchLeaderBoards(exerciseId);
 
     editButton.addEventListener("click", handleEditExerciseButtonClick);
     deleteButton.addEventListener(
@@ -206,5 +199,5 @@ window.addEventListener("DOMContentLoaded", async () => {
     cancelButton.addEventListener("click", handleCancelButtonDuringCreate);
   }
 
-  await fetchLeaderBoards();
+
 });
