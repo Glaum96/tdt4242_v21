@@ -394,7 +394,7 @@ class WorkoutLiking(APIView):
         likingAllowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
             Q(userLiking=self.request.user) & Q(workoutToLike__pk=pk)).count() == 0
 
-        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count()
+        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
 
         return Response((likingAllowed, likeAmount), status.HTTP_200_OK)
 
@@ -404,7 +404,7 @@ class WorkoutLiking(APIView):
         likingAllowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
             Q(userLiking=self.request.user) & Q(workoutToLike__pk=pk)).count() == 0
 
-        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count()
+        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
 
         if likingAllowed:
             newWorkoutLike = WorkoutLike(workoutToLike=Workout.objects.get(pk=pk), userLiking=self.request.user)
