@@ -8,7 +8,17 @@ async function fetchWorkouts(ordering) {
 
         let workouts = data.results;
         let container = document.getElementById('div-content');
-        workouts.forEach(workout => {
+
+        for(const workout of workouts){
+
+            let workoutLikes = await sendRequest("GET", `${HOST}/api/workoutLiking/${workout.id}`);
+
+            let workoutLikesData = [true, 1]
+
+            if(workoutLikes.ok){
+                workoutLikesData = await workoutLikes.json()
+            }
+
             let templateWorkout = document.querySelector("#template-workout");
             let cloneWorkout = templateWorkout.content.cloneNode(true);
 
@@ -27,8 +37,35 @@ async function fetchWorkouts(ordering) {
             rows[2].querySelectorAll("td")[1].textContent = workout.owner_username; //Owner
             rows[3].querySelectorAll("td")[1].textContent = workout.exercise_instances.length; // Exercises
 
+            rows[4].querySelectorAll("td")[1].textContent = workoutLikesData[1]
+
+            let likeButton = rows[4].querySelectorAll("td")[2].querySelector(".like-button")
+
+            if(!workoutLikesData[0]){
+                likeButton.classList.add("active")
+            }
+
+            likeButton.addEventListener("click", async function(e) {
+                e.preventDefault();
+
+                if(!this.classList.contains("active")){
+                    this.classList.add("active");
+                    this.classList.add("animated");
+                    generateClones(this);
+
+                    let likeWorkoutResponse = await sendRequest("POST", `${HOST}/api/workoutLiking/${workout.id}/`, {});
+
+                    if(likeWorkoutResponse.ok){
+                        let likeWorkoutData = await likeWorkoutResponse.json()
+                        rows[4].querySelectorAll("td")[1].textContent = likeWorkoutData[1]
+                        likeButton.classList.add("active")
+                    }
+                }
+            })
+
+
             container.appendChild(aWorkout);
-        });
+        };
         return workouts;
     }
 }
@@ -104,3 +141,47 @@ window.addEventListener("DOMContentLoaded", async () => {
         });
     }
 });
+
+
+
+
+
+function generateClones(button) {
+  let clones = randomInt(4, 7);
+  for (let it = 1; it <= clones; it++) {
+    let clone = button.querySelector("svg").cloneNode(true),
+      size = randomInt(5, 16);
+    button.appendChild(clone);
+    clone.setAttribute("width", size);
+    clone.setAttribute("height", size);
+    clone.style.position = "absolute";
+    clone.style.transition =
+      "transform 0.5s cubic-bezier(0.12, 0.74, 0.58, 0.99) 0.3s, opacity 1s ease-out .5s";
+    let animTimeout = setTimeout(function() {
+      clearTimeout(animTimeout);
+      clone.style.transform =
+        "translate3d(" +
+        (plusOrMinus() * randomInt(10, 25)) +
+        "px," +
+        (plusOrMinus() * randomInt(10, 25)) +
+        "px,0)";
+      clone.style.opacity = 0;
+    }, 1);
+    let removeNodeTimeout = setTimeout(function() {
+      clone.parentNode.removeChild(clone);
+      clearTimeout(removeNodeTimeout);
+    }, 900);
+    let removeClassTimeout = setTimeout( function() {
+      button.classList.remove("animated")
+    }, 600);
+  }
+}
+
+
+function plusOrMinus() {
+  return Math.random() < 0.5 ? -1 : 1;
+}
+
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}

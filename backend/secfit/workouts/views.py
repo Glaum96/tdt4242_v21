@@ -7,6 +7,7 @@ from rest_framework.parsers import (
     JSONParser,
 )
 import json
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -23,7 +24,7 @@ from workouts.permissions import (
     IsWorkoutPublic,
 )
 from workouts.mixins import CreateListModelMixin
-from workouts.models import Workout, Exercise, ExerciseInstance, WorkoutFile
+from workouts.models import Workout, Exercise, ExerciseInstance, WorkoutFile, WorkoutLike
 from workouts.serializers import WorkoutSerializer, ExerciseSerializer
 from workouts.serializers import RememberMeSerializer
 from workouts.serializers import ExerciseInstanceSerializer, WorkoutFileSerializer
@@ -380,3 +381,35 @@ class WorkoutFileDetail(
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+
+# View for fetching like amount, and for creating new likes
+class WorkoutLiking(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    # Returns a tuple with a boolean value that is true if liking is allowed (the workout does not belong to the user
+    # and the workout has not been liked before), and the amount of likes that the workout has
+    def get(self, request, pk):
+
+        likingAllowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
+            Q(userLiking=self.request.user) & Q(workoutToLike__pk=pk)).count() == 0
+
+        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
+
+        return Response((likingAllowed, likeAmount), status.HTTP_200_OK)
+
+    # Tries to like a new post and returns the same as the GET above
+    def post(self, request, pk):
+
+        likingAllowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
+            Q(userLiking=self.request.user) & Q(workoutToLike__pk=pk)).count() == 0
+
+        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
+
+        if likingAllowed:
+            newWorkoutLike = WorkoutLike(workoutToLike=Workout.objects.get(pk=pk), userLiking=self.request.user)
+            newWorkoutLike.save()
+
+            return Response((False, likeAmount + 1), status.HTTP_201_CREATED)
+
+        return Response((likingAllowed, likeAmount), status.HTTP_100_CONTINUE)
