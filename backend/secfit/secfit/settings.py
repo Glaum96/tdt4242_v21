@@ -43,7 +43,8 @@ ALLOWED_HOSTS = [
     "10." + groupid + ".0.4",
     "molde.idi.ntnu.no",
     "10.0.2.2",
-    "secfit-1-backend.herokuapp.com"
+    "secfit-1-backend.herokuapp.com",
+    "secfit-1-frontend.herokuapp.com/"
 ]
 
 # Application definition
