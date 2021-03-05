@@ -43,6 +43,7 @@ ALLOWED_HOSTS = [
     "10." + groupid + ".0.4",
     "molde.idi.ntnu.no",
     "10.0.2.2",
+    "secfit-1-backend.herokuapp.com"
 ]
 
 # Application definition
@@ -95,12 +96,23 @@ WSGI_APPLICATION = "secfit.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+is_prod = os.environ.get("IS_HEROKU", None)
+
+if is_prod:
+    settings(locals())
+
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    print("\n\n\n\n\nHEI\n\n\n\n\n\n")
+    DATABASES = {'default': dj_database_url.config()}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+
 
 # CORS Policy
 CORS_ORIGIN_ALLOW_ALL = (
