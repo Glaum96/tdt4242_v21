@@ -3,7 +3,6 @@ import os
 
 import dj_database_url
 from django.test.runner import DiscoverRunner
-from .djangoHeroku import settings
 
 
 MAX_CONN_AGE = 600
