@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-
+from .djangoHeroku import settings
 
 # Get the GROUPID variable to accept connections from the application server and NGINX
 groupid = os.environ.get("GROUPID", "0")
