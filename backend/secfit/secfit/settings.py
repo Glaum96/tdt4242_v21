@@ -36,15 +36,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = "aqw(!p=^c00jlo$24uv46$n%epw@#1nppviqh#p4l9af3&^32f"
 
 ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "0.0.0.0",
-    "10." + groupid + ".0.6",
-    "10." + groupid + ".0.4",
-    "molde.idi.ntnu.no",
-    "10.0.2.2",
-    "secfit-1-backend.herokuapp.com",
-    "secfit-1-frontend.herokuapp.com"
+    "*"
 ]
 
 # Application definition
