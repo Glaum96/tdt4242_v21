@@ -7,10 +7,10 @@ from django.test import TestCase
 class TestTestCase(TestCase):
 
     def test_true(self):
-        """Animals that can speak are correctly identified"""
+        """Check if true is true"""
         self.assertTrue(True)
 
         
     def test_false(self):
-        """Animals that can speak are correctly identified"""
-        self.assertFalse(True)
+        """Check if false is false"""
+        self.assertFalse(False)
