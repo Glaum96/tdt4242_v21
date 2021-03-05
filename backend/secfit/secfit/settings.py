@@ -44,7 +44,7 @@ ALLOWED_HOSTS = [
     "molde.idi.ntnu.no",
     "10.0.2.2",
     "secfit-1-backend.herokuapp.com",
-    "secfit-1-frontend.herokuapp.com/"
+    "secfit-1-frontend.herokuapp.com"
 ]
 
 # Application definition
@@ -116,7 +116,11 @@ else:
 
 
 # CORS Policy
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = (
+    True
+)
+
 
 
 # Internationalization
