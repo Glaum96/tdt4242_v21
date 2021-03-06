@@ -133,17 +133,27 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 
+# REST_FRAMEWORK = {
+#     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+#     "PAGE_SIZE": 10,
+#     #"DEFAULT_AUTHENTICATION_CLASSES": (
+#     #    "rest_framework_simplejwt.authentication.JWTAuthentication",
+#     #),
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         # 'rest_framework.authentication.SessionAuthentication',
+#         "rest_framework_simplejwt.authentication.JWTAuthentication"
+#     ),
+# }
+
+
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 10,
-    #"DEFAULT_AUTHENTICATION_CLASSES": (
-    #    "rest_framework_simplejwt.authentication.JWTAuthentication",
-    #),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        "rest_framework_simplejwt.authentication.JWTAuthentication"
+    "PAGE_SIZE": 100,
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
+
 
 AUTH_USER_MODEL = "users.User"
 
