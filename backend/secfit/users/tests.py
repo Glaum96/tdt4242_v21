@@ -68,7 +68,7 @@ class RegisterEmailBoundaryTestCase(TestCase):
 class RegisterEmailBoundaryTestCase(TestCase):
 
     def setUp(self):
-        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1,"athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "","city": "","street_address":""}')
+        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "","city": "","street_address":""}')
         self.client = APIClient() 
 
     def test_blank_password(self):
@@ -134,7 +134,7 @@ class RegisterEmailBoundaryTestCase(TestCase):
 class RegisterPhonenumberBoundaryTestCase(TestCase):
 
     def setUp(self):
-        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1,"athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "","city": "","street_address":""}')
+        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "","city": "","street_address":""}')
         self.client = APIClient() 
         
     def test_blank_number(self):
@@ -181,7 +181,7 @@ class RegisterPhonenumberBoundaryTestCase(TestCase):
 class RegisterCountryBoundaryTestCase(TestCase):
 
     def setUp(self):
-        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1,"athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "hoh","city": "","street_address":""}')
+        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "hoh","city": "","street_address":""}')
         self.client = APIClient() 
         
     def test_blank_country(self):
@@ -202,7 +202,7 @@ class RegisterCountryBoundaryTestCase(TestCase):
 class RegisterCityBoundaryTestCase(TestCase):
 
     def setUp(self):
-        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1,"athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "hoh","city": "Hello","street_address":""}')
+        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "hoh","city": "Hello","street_address":""}')
         self.client = APIClient() 
         
     def test_blank_city(self):
@@ -219,7 +219,7 @@ class RegisterCityBoundaryTestCase(TestCase):
 class RegisterCityBoundaryTestCase(TestCase):
 
     def setUp(self):
-        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1,"athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "hoh","city": "Hello","street_address":"22"}')
+        self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "hoh","city": "Hello","street_address":"22"}')
         self.client = APIClient() 
         
     def test_blank_adress(self):
