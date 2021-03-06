@@ -145,6 +145,7 @@ class WorkoutList(
             qs = Workout.objects.filter(
                 Q(visibility="PU")
                 | (Q(visibility="CO") & Q(owner__coach=self.request.user))
+                | (Q(visibility="PR") & Q(owner=self.request.user))
             ).distinct()
 
         return qs
