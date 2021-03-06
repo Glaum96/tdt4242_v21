@@ -309,7 +309,6 @@ class TestWorkoutLikes(unittest.TestCase):
     # tearDownClass, but that did not let me access the website
     def test_remove_created_workout(self):
         driver = self.driver
-        print("YOOOOO")
 
         # Opens the web browser, and logs out just in case someone was already logged in
         driver.get("http://localhost:9090/logout.html")
