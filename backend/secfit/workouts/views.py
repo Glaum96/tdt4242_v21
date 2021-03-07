@@ -256,7 +256,8 @@ class Leaderboards(APIView):
     
             for j in range(0, len(leaderboardNumbers)):
                 if leaderboardNumbers[j]['workout__owner__pk'] == currentLoggedInUser.pk:
-                    leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
+                    if j+1 > 5:
+                        leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
                     break
             else:
                 leaderboardResult.append({"name": currentLoggedInUser.username, "value": 0, "rank": len(leaderboardNumbers) + 1})
