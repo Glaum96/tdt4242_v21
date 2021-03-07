@@ -3,8 +3,7 @@ from rest_framework.test import APIRequestFactory, APIClient
 import json
 from unittest import skip
 
-# Create your tests here.
-<<<<<<< backend/secfit/users/tests.py
+
 class RegisterUsernameBoundaryTestCase(TestCase):
 
     def setUp(self):
