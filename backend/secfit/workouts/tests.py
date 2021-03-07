@@ -351,3 +351,24 @@ class IsReadOnlyTestCase(TestCase):
 
     def tearDown(self):
         return super().tearDown()
+
+class LeaderboardIntegrationTestCase(TestCase):
+
+    def setUp(self):
+        User.objects.create(id="1",username="Bill",password="secret")
+        self.user_1 = User.objects.get(id="1")
+        self.client = APIClient()
+        self.client.force_authenticate(user=self.user_1)
+        self.client.post('http://testserver/api/exercises/', json.dumps({"name":"test","description":"test","unit":"kilos"}), content_type='application/json')
+        self.exercise_object = {"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}
+        self.workout_request = json.loads('{"name": "bob","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [],"filename": []}')
+
+    def test_user_is_on_leaderboard_no_workouts(self):
+        data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        self.assertEquals(data[0]['name'], self.user_1.username)
+        self.assertEquals(data[0]['value'], 0)
+        self.assertEquals(data[0]['rank'], 1)
+
+    def test_user_is_on_leaderboard_with_updated_score(self):
+        self.workout_request["exercise_instances"] = self.exercise_object
+        self.cli
