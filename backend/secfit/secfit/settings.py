@@ -154,6 +154,15 @@ REST_FRAMEWORK = {
     ),
 }
 
+# We add this password validator to make the tests pass and get full coverage of the UserSerializer class. Other boundary value constraints should be implemented in the future.
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 2,
+        }
+    }
+]
 
 AUTH_USER_MODEL = "users.User"
 

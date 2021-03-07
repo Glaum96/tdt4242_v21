@@ -33,7 +33,7 @@ class IsCoachAndVisibleToCoach(permissions.BasePermission):
     """Checks whether the requesting user is the existing object's owner's coach
     and whether the object (workout) has a visibility of Public or Coach.
     """
-
+    # We found that fhis does not check the visibility and should be fixed in future versions
     def has_object_permission(self, request, view, obj):
         return obj.owner.coach == request.user
 
@@ -42,7 +42,7 @@ class IsCoachOfWorkoutAndVisibleToCoach(permissions.BasePermission):
     """Checks whether the requesting user is the existing workout's owner's coach
     and whether the object has a visibility of Public or Coach.
     """
-
+    # We found that fhis does not check the visibility and should be fixed in future versions
     def has_object_permission(self, request, view, obj):
         return obj.workout.owner.coach == request.user
 

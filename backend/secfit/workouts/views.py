@@ -142,6 +142,8 @@ class WorkoutList(
             # - The workout has public visibility
             # - The owner of the workout is the requesting user
             # - The workout has coach visibility and the requesting user is the owner's coach
+            
+            # We found that his code has been edited so that private workouts are sent to the frontend if the requesting user is the owner. Otherwise the tests would fail.
             qs = Workout.objects.filter(
                 Q(visibility="PU")
                 | (Q(visibility="CO") & (Q(owner__coach=self.request.user)) | Q(owner=self.request.user))
