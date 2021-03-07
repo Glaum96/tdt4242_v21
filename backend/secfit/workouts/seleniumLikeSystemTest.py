@@ -17,13 +17,16 @@ from datetime import datetime
 # Before running this test, remember to host the application on http://localhost:9090 using docker-compose up --build
 # in the main project folder
 
-# Test is run by: python seleniumLikeIntegrationTest.py (when in the workouts-folder and while website is live with docker)
+# Test is run by: python seleniumLikeSystemTest.py (when in the workouts-folder and while website is live with docker)
 class TestWorkoutLikes(unittest.TestCase):
 
     # Creates two unique usernames to be used in the tests;
     # by appending the current exact time to the username, we will always have unique usernames
     uniqueUsername1 = "LikeTestUser1-" + datetime.utcnow().strftime("%m-%d-%Y-%H-%M-%S.%f")
     uniqueUsername2 = "LikeTestUser2-" + datetime.utcnow().strftime("%m-%d-%Y-%H-%M-%S.%f")
+
+    # Simple password for test users
+    userPassword = "ABCD1234"
 
 
     # Runs before each test
@@ -33,8 +36,9 @@ class TestWorkoutLikes(unittest.TestCase):
         # Sets an implicit wait of 10 seconds (Test will wait for up to 10 seconds for an expected DOM element)
         self.driver.implicitly_wait(10)
 
+
     # Tests that a user auto-likes his own workout
-    def test_auto_liked_own_workout_and_only_one_like(self):
+    def test01_auto_liked_own_workout_and_only_one_like(self):
         driver = self.driver
 
         # Opens the web browser, and logs out just in case someone was already logged in
@@ -60,8 +64,8 @@ class TestWorkoutLikes(unittest.TestCase):
         # Inputs values in all the registration fields
         usernameField.send_keys(uniqueUsername)
         emailField.send_keys(uniqueUsername+"@test.test")
-        passwordField.send_keys("123")
-        repeatPasswordField.send_keys("123")
+        passwordField.send_keys(self.__class__.userPassword)
+        repeatPasswordField.send_keys(self.__class__.userPassword)
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Narvik")
@@ -73,7 +77,7 @@ class TestWorkoutLikes(unittest.TestCase):
 
         # The "new workout" button sometimes doesn't registers clicks even though it has been loaded into the DOM.
         # Therefore, we wait 1 second before clicking it
-        time.sleep(1)
+        time.sleep(0.5)
 
         # Finds and clicks the button that opens the page for creating a new workout
         newWorkoutButton = driver.find_element_by_id("btn-create-workout")
@@ -85,31 +89,28 @@ class TestWorkoutLikes(unittest.TestCase):
         workoutNotesField = driver.find_element_by_id("inputNotes")
 
         # Waits until fields become editable
-        time.sleep(2)
+        time.sleep(1)
 
         # Inputs values into fields
         workoutNameField.send_keys("TestWorkout")
         workoutDateField.clear();
         workoutDateField.send_keys("1111-01-01 00:01");
         workoutNotesField.send_keys("This is an auto-generated workout meant for testing")
-
-        time.sleep(1)
+        time.sleep(0.5)
 
         # Finds and clicks the button that publishes the new workout
         publishWorkoutButton = driver.find_element_by_id("btn-ok-workout")
         publishWorkoutButton.click()
-
-        time.sleep(2)
+        time.sleep(0.5)
 
         # Scrolls to the bottom of the page; a 'problem' (due to dynamic loading) with not every workout being
         # loaded into the DOM appears when we have too many workouts. Scrolling to the bottom fixes this.
         self.scroll_down()
-        time.sleep(1)
 
         # Finds and clicks the button that views the user's own workouts
         myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
         myWorkoutsButton.click()
-        time.sleep(2)
+        time.sleep(1)
 
         # Finds the like button and the like amount of the newly-created workout
         likeButton = driver.find_elements_by_css_selector("a.like-button")[-1]
@@ -135,7 +136,7 @@ class TestWorkoutLikes(unittest.TestCase):
         time.sleep(1)
 
         likeButton.click()
-        time.sleep(2)
+        time.sleep(1)
 
         # Gets the newest like number that is in the DOM
         likeNumber = driver.find_elements_by_css_selector("td.like-amount")[-1]
@@ -146,17 +147,16 @@ class TestWorkoutLikes(unittest.TestCase):
         # Refresh the site so that we can be sure that we fetch the newest like amounts, and that the workout wasn't
         # actually re-liked by the owner (that no change happened in the database)
         driver.refresh()
-        time.sleep(2)
+        time.sleep(1)
 
         # Scrolls to the bottom of the page; a 'problem' (due to dynamic loading) with not every workout being
         # loaded into the DOM appears when we have too many workouts. Scrolling to the bottom fixes this.
         self.scroll_down()
-        time.sleep(1)
 
         # Finds and clicks the button that views the user's own workouts
         myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
         myWorkoutsButton.click()
-        time.sleep(2)
+        time.sleep(1)
 
         # Finds the like button and the like amount of the newly-created workout
         likeButton = driver.find_elements_by_css_selector("a.like-button")[-1]
@@ -169,11 +169,9 @@ class TestWorkoutLikes(unittest.TestCase):
         # Tests that the like button is still active (already liked by the owner)
         self.assertEqual("like-button active", likeButton.get_attribute("class"))
 
-        time.sleep(1)
-
 
     # Tests that a user can like another user's public workout *once*
-    def test_liked_by_other_user_and_only_one_like(self):
+    def test02_liked_by_other_user_and_only_one_like(self):
         driver = self.driver
 
         # Opens the web browser, and logs out just in case someone was already logged in
@@ -199,8 +197,8 @@ class TestWorkoutLikes(unittest.TestCase):
         # Inputs values in all the registration fields
         usernameField.send_keys(uniqueUsername)
         emailField.send_keys(uniqueUsername + "@test.test")
-        passwordField.send_keys("123")
-        repeatPasswordField.send_keys("123")
+        passwordField.send_keys(self.__class__.userPassword)
+        repeatPasswordField.send_keys(self.__class__.userPassword)
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Narvik")
@@ -209,13 +207,11 @@ class TestWorkoutLikes(unittest.TestCase):
         # Finds and clicks the button that creates the account
         createAccountButton = driver.find_element_by_id("btn-create-account")
         createAccountButton.click()
-
-        time.sleep(1)
+        time.sleep(0.5)
 
         # Scrolls to the bottom of the page; a 'problem' (due to dynamic loading) with not every workout being
         # loaded into the DOM appears when we have too many workouts. Scrolling to the bottom fixes this.
         self.scroll_down()
-        time.sleep(1)
 
         # Finds the like button and the like amount of the newly-created workout
         likeButton = driver.find_elements_by_css_selector("a.like-button")[-1]
@@ -229,7 +225,7 @@ class TestWorkoutLikes(unittest.TestCase):
 
         # Clicks the like button
         likeButton.click()
-        time.sleep(2)
+        time.sleep(1)
 
         # Gets the newest like number that is in the DOM
         likeNumber = driver.find_elements_by_css_selector("td.like-amount")[-1]
@@ -245,7 +241,6 @@ class TestWorkoutLikes(unittest.TestCase):
         # Scrolls to the bottom of the page; a 'problem' (due to dynamic loading) with not every workout being
         # loaded into the DOM appears when we have too many workouts. Scrolling to the bottom fixes this.
         self.scroll_down()
-        time.sleep(1)
 
         # Finds the like button and the like amount of the newly-created workout
         likeButton = driver.find_elements_by_css_selector("a.like-button")[-1]
@@ -257,7 +252,7 @@ class TestWorkoutLikes(unittest.TestCase):
 
         # Tests that the like button is still active (already liked)
         self.assertEqual("like-button active", likeButton.get_attribute("class"))
-        time.sleep(1)
+        time.sleep(0.5)
 
         # Tries to re-click the like button to unlike; this should not be possible
         try:
@@ -273,7 +268,7 @@ class TestWorkoutLikes(unittest.TestCase):
         time.sleep(1)
 
         likeButton.click()
-        time.sleep(2)
+        time.sleep(1)
 
         # Gets the newest like number that is in the DOM
         likeNumber = driver.find_elements_by_css_selector("td.like-amount")[-1]
@@ -284,12 +279,11 @@ class TestWorkoutLikes(unittest.TestCase):
         # Refresh the site so that we can be sure that we fetch the newest like amounts, and that the workout wasn't
         # actually re-liked by the owner (that the change happened in the database as well)
         driver.refresh()
-        time.sleep(2)
+        time.sleep(1)
 
         # Scrolls to the bottom of the page; a 'problem' (due to dynamic loading) with not every workout being
         # loaded into the DOM appears when we have too many workouts. Scrolling to the bottom fixes this.
         self.scroll_down()
-        time.sleep(1)
 
         # Finds the like button and the like amount of the newly-created workout
         likeButton = driver.find_elements_by_css_selector("a.like-button")[-1]
@@ -302,20 +296,18 @@ class TestWorkoutLikes(unittest.TestCase):
         # Tests that the like button is still active (already liked)
         self.assertEqual("like-button active", likeButton.get_attribute("class"))
 
-        time.sleep(1)
-
 
     # *Not a test*, just a cleanup that deletes the workout that was created during the other tests. Tried using
     # tearDownClass, but that did not let me access the website
-    def test_remove_created_workout(self):
+    def test99_remove_created_workout(self):
         driver = self.driver
 
         # Opens the web browser, and logs out just in case someone was already logged in
         driver.get("http://localhost:9090/logout.html")
-        time.sleep(2)
+        time.sleep(1)
 
         driver.get("http://localhost:9090/login.html")
-        time.sleep(2)
+        time.sleep(1)
 
         # Finds all the input fields in the register form
         usernameField = driver.find_element_by_name('username')
@@ -326,33 +318,31 @@ class TestWorkoutLikes(unittest.TestCase):
 
         # Inputs values in all the registration fields
         usernameField.send_keys(uniqueUsername)
-        passwordField.send_keys("123")
+        passwordField.send_keys(self.__class__.userPassword)
 
         logInButton = driver.find_element_by_id("btn-login")
         logInButton.click()
-        time.sleep(2)
+        time.sleep(1)
 
         # Scrolls to the bottom of the page; a 'problem' (due to dynamic loading) with not every workout being
         # loaded into the DOM appears when we have too many workouts. Scrolling to the bottom fixes this.
         self.scroll_down()
-        time.sleep(1)
 
         # Finds and clicks the button that views the user's own workouts
         myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
         myWorkoutsButton.click()
-        time.sleep(2)
+        time.sleep(0.5)
 
         workout = driver.find_elements_by_css_selector("a.list-group-item")[-1]
         workout.click()
-        time.sleep(2)
+        time.sleep(1)
 
         editButton = driver.find_element_by_id("btn-edit-workout")
         editButton.click()
-        time.sleep(1)
+        time.sleep(0.5)
 
         deleteWorkoutButton = driver.find_element_by_id("btn-delete-workout")
         deleteWorkoutButton.click()
-        time.sleep(1)
 
 
     # Runs after running the tests
