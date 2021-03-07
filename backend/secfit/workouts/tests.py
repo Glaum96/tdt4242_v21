@@ -576,7 +576,6 @@ class LeaderboardIntegrationTestCase(TestCase):
         self.client2 = APIClient()
         self.client2.force_authenticate(user=self.user_2)
         self.client.post('http://testserver/api/exercises/', json.dumps({"name":"test","description":"test","unit":"kilos"}), content_type='application/json')
-        self.exercise_object = {"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}
         
 
     def test_user_is_on_leaderboard_no_workouts(self):
@@ -683,3 +682,39 @@ class LikesIntegrationTestCase(TestCase):
         self.client2.force_authenticate(user=self.user_2)
         self.client.post('http://testserver/api/exercises/', json.dumps({"name":"test","description":"test","unit":"kilos"}), content_type='application/json')
         self.exercise_object = {"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}
+
+    def test_automatically_liked_own_post(self):
+        workout_request = json.loads('{"name": "bobs workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}],"filename": []}')
+        id1 = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json').data['id']
+        data = self.client.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertFalse(data[0])
+        self.assertEquals(data[1],1)
+
+    def test_cannot_like_post_again(self):
+        workout_request = json.loads('{"name": "bobs workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}],"filename": []}')
+        id1 = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json').data['id']
+        data = self.client.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertFalse(data[0])
+        self.assertEquals(data[1],1)
+        self.client.post('http://testserver/api/workoutLiking/'+str(id1)+'/')
+        data = self.client.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertFalse(data[0])
+        self.assertEquals(data[1],1)
+
+    def test_user_can_like_others_post(self):
+        workout_request = json.loads('{"name": "bobs workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}],"filename": []}')
+        id1 = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json').data['id']
+        data = self.client.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertFalse(data[0])
+        self.assertEquals(data[1],1)
+        data = self.client2.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertTrue(data[0])
+        self.assertEquals(data[1],1)
+        self.client2.post('http://testserver/api/workoutLiking/'+str(id1)+'/')
+        data = self.client2.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertFalse(data[0])
+        self.assertEquals(data[1],2)
+        self.client2.post('http://testserver/api/workoutLiking/'+str(id1)+'/')
+        data = self.client2.get('http://testserver/api/workoutLiking/'+str(id1)+'/').data
+        self.assertFalse(data[0])
+        self.assertEquals(data[1],2)
