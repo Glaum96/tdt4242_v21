@@ -16,7 +16,10 @@ from django.utils import timezone
 
 # Create your tests here.
 
-# Create your tests here.
+# -------------------------------------------------------------------------------------------------
+# Boundary value tests
+# -------------------------------------------------------------------------------------------------
+
 class WorkoutsNameBoundaryTestCase(TestCase):
 
     def setUp(self):
@@ -223,10 +226,11 @@ class WorkoutsExerciseBoundaryTestCase(TestCase):
         self.assertEquals(request.status_code,400)
 
 
-# Create your tests here.
-"""
-Tests for ./permissions.py
-"""
+
+# -------------------------------------------------------------------------------------------------
+# Tests for ./permissions.py
+# -------------------------------------------------------------------------------------------------
+
 class IsOwnerTestCase(TestCase):
 
     def setUp(self):
@@ -589,9 +593,16 @@ class IsReadOnlyTestCase(TestCase):
     def tearDown(self):
         return super().tearDown()
 
+
+
+# -------------------------------------------------------------------------------------------------
+# Integration tests for the new leaderboards functionality 
+# -------------------------------------------------------------------------------------------------
+
 class LeaderboardIntegrationTestCase(TestCase):
 
     def setUp(self):
+        # Creates two users and corresponding clients for requests
         User.objects.create(id="1",username="Bill",password="secret")
         self.user_1 = User.objects.get(id="1")
         self.client = APIClient()
@@ -600,11 +611,14 @@ class LeaderboardIntegrationTestCase(TestCase):
         self.user_2 = User.objects.get(id="2")
         self.client2 = APIClient()
         self.client2.force_authenticate(user=self.user_2)
+
+        # Posts an exercise
         self.client.post('http://testserver/api/exercises/', json.dumps({"name":"test","description":"test","unit":"kilos"}), content_type='application/json')
         
 
     def test_user_is_on_leaderboard_no_workouts(self):
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(data[0]['name'], self.user_1.username)
         self.assertEquals(data[0]['value'], 0)
         self.assertEquals(data[0]['rank'], 1)
@@ -613,6 +627,7 @@ class LeaderboardIntegrationTestCase(TestCase):
         workout_request = json.loads('{"name": "bobs workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"3","sets":"5"}],"filename": []}')
         post = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json')
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),1)
         self.assertEquals(data[0]['name'], self.user_1.username)
         self.assertEquals(data[0]['value'], 15)
@@ -624,10 +639,12 @@ class LeaderboardIntegrationTestCase(TestCase):
         self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json')
         self.client2.post('http://testserver/api/workouts/', json.dumps(workout_request2), content_type='application/json')
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),2)
         self.assertEquals(data[0]['name'], self.user_2.username)
         self.assertEquals(data[0]['value'], 25)
         self.assertEquals(data[0]['rank'], 1)
+
         self.assertEquals(data[1]['name'], self.user_1.username)
         self.assertEquals(data[1]['value'], 15)
         self.assertEquals(data[1]['rank'], 2)
@@ -638,15 +655,20 @@ class LeaderboardIntegrationTestCase(TestCase):
         id1 = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json').data['id']
         id2 = self.client2.post('http://testserver/api/workouts/', json.dumps(workout_request2), content_type='application/json').data['id']
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),2)
         self.assertEquals(data[0]['name'], self.user_2.username)
         self.assertEquals(data[0]['value'], 25)
         self.assertEquals(data[0]['rank'], 1)
+        
         self.assertEquals(data[1]['name'], self.user_1.username)
         self.assertEquals(data[1]['value'], 15)
         self.assertEquals(data[1]['rank'], 2)
+        
         self.client2.delete('http://testserver/api/workouts/'+str(id2)+'/').status_code
+        
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+
         self.assertEquals(len(data),1)
         self.assertEquals(data[0]['name'], self.user_1.username)
         self.assertEquals(data[0]['value'], 15)
@@ -658,6 +680,7 @@ class LeaderboardIntegrationTestCase(TestCase):
         id1 = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json').data['id']
         id2 = self.client2.post('http://testserver/api/workouts/', json.dumps(workout_request2), content_type='application/json').data['id']
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),2)
         self.assertEquals(data[0]['name'], self.user_2.username)
         self.assertEquals(data[0]['value'], 25)
@@ -665,9 +688,13 @@ class LeaderboardIntegrationTestCase(TestCase):
         self.assertEquals(data[1]['name'], self.user_1.username)
         self.assertEquals(data[1]['value'], 15)
         self.assertEquals(data[1]['rank'], 2)
+        
         workout_request2['visibility'] = "PR"
+        
         self.client2.put('http://testserver/api/workouts/'+str(id2)+'/', json.dumps(workout_request2), content_type='application/json')
+        
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),1)
         self.assertEquals(data[0]['name'], self.user_1.username)
         self.assertEquals(data[0]['value'], 15)
@@ -679,13 +706,18 @@ class LeaderboardIntegrationTestCase(TestCase):
         id1 = self.client.post('http://testserver/api/workouts/', json.dumps(workout_request), content_type='application/json').data['id']
         id2 = self.client2.post('http://testserver/api/workouts/', json.dumps(workout_request2), content_type='application/json').data['id']
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),1)
         self.assertEquals(data[0]['name'], self.user_1.username)
         self.assertEquals(data[0]['value'], 15)
         self.assertEquals(data[0]['rank'], 1)
+        
         workout_request2['visibility'] = "PU"
+        
         self.client2.put('http://testserver/api/workouts/'+str(id2)+'/', json.dumps(workout_request2), content_type='application/json')
+        
         data = (self.client.get('http://testserver/api/leaderboards/1/').data)
+        
         self.assertEquals(len(data),2)
         self.assertEquals(data[0]['name'], self.user_2.username)
         self.assertEquals(data[0]['value'], 25)
@@ -693,7 +725,120 @@ class LeaderboardIntegrationTestCase(TestCase):
         self.assertEquals(data[1]['name'], self.user_1.username)
         self.assertEquals(data[1]['value'], 15)
         self.assertEquals(data[1]['rank'], 2)
+
+    def test_leaderboard_length_with_many_users(self):
+        workout_request1 = json.loads('{"name": "User 1s workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"10","sets":"5"}],"filename": []}')
+        workout_request2 = json.loads('{"name": "User 2s workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"9","sets":"5"}],"filename": []}')
+        workout_request3 = json.loads('{"name": "User 3s workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"8","sets":"5"}],"filename": []}')
+        workout_request4 = json.loads('{"name": "User 4s workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"7","sets":"5"}],"filename": []}')
+        workout_request5 = json.loads('{"name": "User 5s workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"6","sets":"5"}],"filename": []}')
+        workout_request6 = json.loads('{"name": "User 6s workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"5","sets":"5"}],"filename": []}')
+        workout_request_me = json.loads('{"name": "My workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"1","sets":"5"}],"filename": []}')
+
+        for i in range(2,9):
+            User.objects.create(id=str(i+1),username="User "+str(i+1),password="secret")
         
+        self.user_1 = User.objects.get(id="3")
+        self.client1 = APIClient()
+        self.client1.force_authenticate(user=self.user_1)
+
+        self.user_2 = User.objects.get(id="4")
+        self.client2 = APIClient()
+        self.client2.force_authenticate(user=self.user_2)
+
+        self.user_3 = User.objects.get(id="5")
+        self.client3 = APIClient()
+        self.client3.force_authenticate(user=self.user_3)
+        
+        self.user_4 = User.objects.get(id="6")
+        self.client4 = APIClient()
+        self.client4.force_authenticate(user=self.user_4)
+        
+        self.user_5 = User.objects.get(id="7")
+        self.client5 = APIClient()
+        self.client5.force_authenticate(user=self.user_5)
+        
+        self.user_6 = User.objects.get(id="8")
+        self.client6 = APIClient()
+        self.client6.force_authenticate(user=self.user_6)
+
+        # User 9 is me
+        self.user_me = User.objects.get(id="9")
+        self.client_me = APIClient()
+        self.client_me.force_authenticate(user=self.user_me)
+
+        self.client1.post('http://testserver/api/workouts/', json.dumps(workout_request1), content_type='application/json')
+        self.client2.post('http://testserver/api/workouts/', json.dumps(workout_request2), content_type='application/json')
+        self.client3.post('http://testserver/api/workouts/', json.dumps(workout_request3), content_type='application/json')
+        self.client4.post('http://testserver/api/workouts/', json.dumps(workout_request4), content_type='application/json')
+        self.client5.post('http://testserver/api/workouts/', json.dumps(workout_request5), content_type='application/json')
+        self.client6.post('http://testserver/api/workouts/', json.dumps(workout_request6), content_type='application/json')
+        self.client_me.post('http://testserver/api/workouts/', json.dumps(workout_request_me), content_type='application/json')
+
+        data = (self.client_me.get('http://testserver/api/leaderboards/1/').data)
+
+        # The leaderboards return the top 5 athletes and you own score. Now the requesting user (client_me) is rank 7, which is not in the top 5, which makes the expected length of the returned data 5 + 1 = 6
+        self.assertEquals(len(data),6)
+
+        # Tests if the top 5 + own score is correct
+        self.assertEquals(data[0]['name'], self.user_1.username)
+        self.assertEquals(data[0]['value'], 50)
+        self.assertEquals(data[0]['rank'], 1)
+
+        self.assertEquals(data[1]['name'], self.user_2.username)
+        self.assertEquals(data[1]['value'], 45)
+        self.assertEquals(data[1]['rank'], 2)
+
+        self.assertEquals(data[2]['name'], self.user_3.username)
+        self.assertEquals(data[2]['value'], 40)
+        self.assertEquals(data[2]['rank'], 3)
+
+        self.assertEquals(data[3]['name'], self.user_4.username)
+        self.assertEquals(data[3]['value'], 35)
+        self.assertEquals(data[3]['rank'], 4)
+
+        self.assertEquals(data[4]['name'], self.user_5.username)
+        self.assertEquals(data[4]['value'], 30)
+        self.assertEquals(data[4]['rank'], 5)
+
+        self.assertEquals(data[5]['name'], self.user_me.username)
+        self.assertEquals(data[5]['value'], 5)
+        self.assertEquals(data[5]['rank'], 7)
+
+        # I (User 9) posts a huge new workout which places me in the top 5
+        workout_request_me_big = json.loads('{"name": "My workout","date": "2021-03-20T13:29:00.000Z","notes": "jj","visibility":"PU","exercise_instances": [{"exercise":"http://testserver/api/exercises/1/","number":"100","sets":"5"}],"filename": []}')
+        self.client_me.post('http://testserver/api/workouts/', json.dumps(workout_request_me_big), content_type='application/json')
+
+        new_data = (self.client_me.get('http://testserver/api/leaderboards/1/').data)
+
+        # The leaderboards return the top 5 athletes and you own score. Now the requesting user (client_me) is rank 1, which is in the top 5, which makes the expected length of the returned data 5
+        self.assertEquals(len(new_data),5)
+
+        # Tests if the top 5 + own score is correct. My score should now be on the top, and all other athletes' rank should have been decremented by 1. 
+        self.assertEquals(new_data[1]['name'], self.user_1.username)
+        self.assertEquals(new_data[1]['value'], 50)
+        self.assertEquals(new_data[1]['rank'], 2)
+
+        self.assertEquals(new_data[2]['name'], self.user_2.username)
+        self.assertEquals(new_data[2]['value'], 45)
+        self.assertEquals(new_data[2]['rank'], 3)
+
+        self.assertEquals(new_data[3]['name'], self.user_3.username)
+        self.assertEquals(new_data[3]['value'], 40)
+        self.assertEquals(new_data[3]['rank'], 4)
+
+        self.assertEquals(new_data[4]['name'], self.user_4.username)
+        self.assertEquals(new_data[4]['value'], 35)
+        self.assertEquals(new_data[4]['rank'], 5)
+
+        self.assertEquals(new_data[0]['name'], self.user_me.username)
+        self.assertEquals(new_data[0]['value'], 505)
+        self.assertEquals(new_data[0]['rank'], 1)
+
+# -------------------------------------------------------------------------------------------------
+# Integration tests for the new likes functionality 
+# ------------------------------------------------------------------------------------------------- 
+
 class LikesIntegrationTestCase(TestCase):
 
     def setUp(self):
