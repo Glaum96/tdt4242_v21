@@ -1,6 +1,7 @@
 from django.test import TestCase
 from rest_framework.test import APIRequestFactory, APIClient
 import json
+from unittest import skip
 
 # Create your tests here.
 class RegisterUsernameBoundaryTestCase(TestCase):
