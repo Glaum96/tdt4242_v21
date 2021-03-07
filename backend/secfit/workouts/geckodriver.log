@@ -1,0 +1,1899 @@
+1615043189267	geckodriver	INFO	Listening on 127.0.0.1:53428
+1615043192319	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilebVj5xu"
+1615043194604	geckodriver	INFO	Listening on 127.0.0.1:53443
+1615043197624	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileDIFheN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615043200119	Marionette	INFO	Listening on port 53480
+1615043200263	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615043200628	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615043215275	Marionette	INFO	Stopped listening on port 53480
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615043216087	geckodriver	INFO	Listening on 127.0.0.1:53555
+1615043219136	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileun8tyX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615043221249	Marionette	INFO	Listening on port 53563
+1615043221279	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615043221580	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615043234365	Marionette	INFO	Stopped listening on port 53563
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615047004059	geckodriver	INFO	Listening on 127.0.0.1:54318
+1615047007106	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile0NpMMQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615047009284	Marionette	INFO	Listening on port 54328
+1615047009728	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615047009962	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615047018451	Marionette	INFO	Stopped listening on port 54328
+1615047977339	geckodriver	INFO	Listening on 127.0.0.1:54948
+1615047980388	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileDeqU05"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615047982665	Marionette	INFO	Listening on port 54958
+1615047983011	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615047983246	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615048005399	Marionette	INFO	Stopped listening on port 54958
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615048006303	geckodriver	INFO	Listening on 127.0.0.1:55032
+1615048009351	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileXWHmsC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048011505	Marionette	INFO	Listening on port 55042
+1615048011971	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048012191	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615048026772	Marionette	INFO	Stopped listening on port 55042
+1615048027741	geckodriver	INFO	Listening on 127.0.0.1:55109
+1615048030791	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilexCpcn5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048033006	Marionette	INFO	Listening on port 55118
+1615048033415	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048033713	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615048042716	Marionette	INFO	Stopped listening on port 55118
+1615048098995	geckodriver	INFO	Listening on 127.0.0.1:55217
+1615048102042	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileOoSUW0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048104268	Marionette	INFO	Listening on port 55227
+1615048104664	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048104940	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615048126818	Marionette	INFO	Stopped listening on port 55227
+1615048126995	geckodriver	INFO	Listening on 127.0.0.1:55305
+1615048351712	geckodriver	INFO	Listening on 127.0.0.1:55431
+1615048354751	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile3Kn8JB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048357011	Marionette	INFO	Listening on port 55441
+1615048357390	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048357623	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615048379713	Marionette	INFO	Stopped listening on port 55441
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615048380514	geckodriver	INFO	Listening on 127.0.0.1:55521
+1615048383563	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileAxjBZg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048385838	Marionette	INFO	Listening on port 55530
+1615048386189	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048386502	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615048401141	Marionette	INFO	Stopped listening on port 55530
+1615048401953	geckodriver	INFO	Listening on 127.0.0.1:55605
+1615048405000	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileelRuvI"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048407185	Marionette	INFO	Listening on port 55615
+1615048407623	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048407847	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615048423897	Marionette	INFO	Stopped listening on port 55615
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615048435103	geckodriver	INFO	Listening on 127.0.0.1:55694
+1615048438152	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileG43Vav"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048440215	Marionette	INFO	Listening on port 55703
+1615048440280	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048440510	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615048462621	Marionette	INFO	Stopped listening on port 55703
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615048463412	geckodriver	INFO	Listening on 127.0.0.1:55783
+1615048466459	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilegVKnmj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048468803	Marionette	INFO	Listening on port 55792
+1615048469090	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.error: services.settings: 
+  main/whats-new-panel Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1615048469619	Marionette	INFO	Stopped listening on port 55792
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615048486358	geckodriver	INFO	Listening on 127.0.0.1:55846
+1615048489386	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilecN9Van"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048491457	Marionette	INFO	Listening on port 55857
+1615048491518	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048491755	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615048505672	Marionette	INFO	Stopped listening on port 55857
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615048525946	geckodriver	INFO	Listening on 127.0.0.1:55962
+1615048528978	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilevzQhZu"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048531144	Marionette	INFO	Listening on port 55973
+1615048531601	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048531961	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615048551344	Marionette	INFO	Stopped listening on port 55973
+1615048551373	geckodriver	INFO	Listening on 127.0.0.1:56061
+1615048554421	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileCQOZon"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615048556800	Marionette	INFO	Listening on port 56070
+1615048557045	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615048557291	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615048558753	Marionette	INFO	Stopped listening on port 56070
+1615048559250	geckodriver	INFO	Listening on 127.0.0.1:56135
+1615050316474	geckodriver	INFO	Listening on 127.0.0.1:59031
+1615050319511	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilelegfFj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615050321748	Marionette	INFO	Listening on port 59051
+1615050322133	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615050322402	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615050332480	Marionette	INFO	Stopped listening on port 59051
+
+###!!! [Child][RunMessage] Error: Channel closing: too lat1615050335543	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilelLJd8H"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615050337830	Marionette	INFO	Listening on port 59134
+1615050338168	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615050340089	Marionette	INFO	Stopped listening on port 59134
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615050522014	geckodriver	INFO	Listening on 127.0.0.1:59287
+1615050525068	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileiW7Bel"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615050527204	Marionette	INFO	Listening on port 59297
+1615050527696	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615050527941	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615050551862	Marionette	INFO	Stopped listening on port 59297
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615050552051	geckodriver	INFO	Listening on 127.0.0.1:59379
+1615050939892	geckodriver	INFO	Listening on 127.0.0.1:59587
+1615050942941	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile59RADs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615050945174	Marionette	INFO	Listening on port 59596
+1615050945580	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615050945853	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615050967998	Marionette	INFO	Stopped listening on port 59596
+1615050968822	geckodriver	INFO	Listening on 127.0.0.1:59676
+1615050971861	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileAmUXAT"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615050974016	Marionette	INFO	Listening on port 59685
+1615050974483	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1615050974968	Marionette	INFO	Stopped listening on port 59685
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615051143864	geckodriver	INFO	Listening on 127.0.0.1:59827
+1615051146913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileoPzzUu"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051149042	Marionette	INFO	Listening on port 59837
+1615051149538	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051149837	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615051172003	Marionette	INFO	Stopped listening on port 59837
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615051172854	geckodriver	INFO	Listening on 127.0.0.1:59922
+1615051175896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileEzpAcF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051178098	Marionette	INFO	Listening on port 59935
+1615051178519	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051178741	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615051179058	Marionette	INFO	Stopped listening on port 59935
+1615051179105	geckodriver	INFO	Listening on 127.0.0.1:59978
+1615051342241	geckodriver	INFO	Listening on 127.0.0.1:60074
+1615051345291	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileHTTIAh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051347400	Marionette	INFO	Listening on port 60085
+1615051347428	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051347660	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615051363603	Marionette	INFO	Stopped listening on port 60085
+1615051716809	geckodriver	INFO	Listening on 127.0.0.1:60387
+1615051719852	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilekdGACM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051722027	Marionette	INFO	Listening on port 60396
+1615051722482	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051722744	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615051735845	Marionette	INFO	Stopped listening on port 60396
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615051736632	geckodriver	INFO	Listening on 127.0.0.1:60473
+1615051739683	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileuSiajY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051741829	Marionette	INFO	Listening on port 60483
+1615051742313	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051742591	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615051745261	Marionette	INFO	Stopped listening on port 60483
+1615051746532	geckodriver	INFO	Listening on 127.0.0.1:60549
+1615051791410	geckodriver	INFO	Listening on 127.0.0.1:60578
+1615051794441	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileJOHz5c"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051796524	Marionette	INFO	Listening on port 60587
+1615051796573	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051796853	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615051810047	Marionette	INFO	Stopped listening on port 60587
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615051810870	geckodriver	INFO	Listening on 127.0.0.1:60658
+1615051813910	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilezv4RqU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051816043	Marionette	INFO	Listening on port 60668
+1615051816536	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051816775	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615051819123	Marionette	INFO	Stopped listening on port 60668
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615051831587	geckodriver	INFO	Listening on 127.0.0.1:60742
+1615051834635	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileZ5GBSV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051836752	Marionette	INFO	Listening on port 60751
+1615051837258	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615051837477	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615051850663	Marionette	INFO	Stopped listening on port 60751
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615051851559	geckodriver	INFO	Listening on 127.0.0.1:60830
+1615051854597	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile4u0erN"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615051856873	Marionette	INFO	Listening on port 60839
+1615052809477	Marionette	INFO	Stopped listening on port 60839
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615052828435	geckodriver	INFO	Listening on 127.0.0.1:61471
+1615052831473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilebl948M"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615052833778	Marionette	INFO	Listening on port 61480
+1615052834097	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615052834400	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615052847662	Marionette	INFO	Stopped listening on port 61480
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615052848600	geckodriver	INFO	Listening on 127.0.0.1:61556
+1615053022258	geckodriver	INFO	Listening on 127.0.0.1:61660
+1615053025307	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile5qDdx9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053027415	Marionette	INFO	Listening on port 61669
+1615053027467	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 340, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053027821	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615053041107	Marionette	INFO	Stopped listening on port 61669
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053041962	geckodriver	INFO	Listening on 127.0.0.1:61745
+1615053045001	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilevPxQis"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053047290	Marionette	INFO	Listening on port 61754
+1615053047627	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053047881	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615053048336	Marionette	INFO	Stopped listening on port 61754
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053421969	geckodriver	INFO	Listening on 127.0.0.1:62040
+1615053424997	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiles20TNM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053427209	Marionette	INFO	Listening on port 62050
+1615053427620	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053427877	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615053441052	Marionette	INFO	Stopped listening on port 62050
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053441872	geckodriver	INFO	Listening on 127.0.0.1:62126
+1615053444923	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileEGvNp6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053447062	Marionette	INFO	Listening on port 62135
+1615053447547	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053447775	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615053448120	Marionette	INFO	Stopped listening on port 62135
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053519207	geckodriver	INFO	Listening on 127.0.0.1:62225
+1615053522250	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiletLYdei"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053524416	Marionette	INFO	Listening on port 62234
+1615053524874	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053525168	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615053538368	Marionette	INFO	Stopped listening on port 62234
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053539157	geckodriver	INFO	Listening on 127.0.0.1:62311
+1615053542204	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileS2H3jS"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053544452	Marionette	INFO	Listening on port 62321
+1615053544826	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053545074	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615053545739	Marionette	INFO	Stopped listening on port 62321
+1615053546319	geckodriver	INFO	Listening on 127.0.0.1:62372
+1615053715863	geckodriver	INFO	Listening on 127.0.0.1:62468
+1615053731679	geckodriver	INFO	Listening on 127.0.0.1:62484
+1615053734723	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilehLZ2L6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053737068	Marionette	INFO	Listening on port 62493
+1615053737349	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053737615	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615053750781	Marionette	INFO	Stopped listening on port 62493
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053751593	geckodriver	INFO	Listening on 127.0.0.1:62552
+1615053754634	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileOASqb0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053757150	Marionette	INFO	Listening on port 62561
+1615053757276	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053757531	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource:///actors/ClickHandlerParent.jsm, line 58: TypeError: browser is null
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 422))
+1615053758013	geckodriver	INFO	Listening on 127.0.0.1:62610
+1
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053787062	geckodriver	INFO	Listening on 127.0.0.1:62631
+1615053790105	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilenX4Bgr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053792260	Marionette	INFO	Listening on port 62642
+1615053792726	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615053792940	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615053806229	Marionette	INFO	Stopped listening on port 62642
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615053807178	geckodriver	INFO	Listening on 127.0.0.1:62717
+1615053810217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile4wTFcB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615053812517	Marionette	INFO	Listening on port 62726
+1615054439709	Marionette	INFO	Stopped listening on port 62726
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileWbYNwy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615054286409	Marionette	INFO	Listening on port 63060
+1615054286834	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615054287098	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615054300298	Marionette	INFO	Stopped listening on port 63060
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615054301143	geckodriver	INFO	Listening on 127.0.0.1:63128
+1615054304184	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileqQnUy4"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615054306522	Marionette	INFO	Listening on port 63138
+1615054307238	Marionette	INFO	Stopped listening on port 63138
+1615054706023	geckodriver	INFO	Listening on 127.0.0.1:63408
+1615054709046	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile0t1BP4"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615054711154	Marionette	INFO	Listening on port 63419
+1615054711667	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615054711990	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615054731529	Marionette	INFO	Stopped listening on port 63419
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615054762944	geckodriver	INFO	Listening on 127.0.0.1:63510
+1615054765985	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile2rUjOl"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615054768135	Marionette	INFO	Listening on port 63519
+1615054768607	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615054768847	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615054786909	Marionette	INFO	Stopped listening on port 63519
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615056999672	geckodriver	INFO	Listening on 127.0.0.1:64853
+1615057002714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilecO8U6A"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057004874	Marionette	INFO	Listening on port 64862
+1615057005348	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057005689	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057017859	Marionette	INFO	Stopped listening on port 64862
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057018673	geckodriver	INFO	Listening on 127.0.0.1:64938
+1615057067638	geckodriver	INFO	Listening on 127.0.0.1:64969
+1615057070680	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile1RmBDy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057072835	Marionette	INFO	Listening on port 64980
+1615057073302	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057073603	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057085752	Marionette	INFO	Stopped listening on port 64980
+1615057086576	geckodriver	INFO	Listening on 127.0.0.1:65051
+1615057089617	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile23Gkjr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057091866	Marionette	INFO	Listening on port 65060
+1615057589245	Marionette	INFO	Stopped listening on port 65060
+5057164225	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileaNRBrQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057166459	Marionette	INFO	Listening on port 65156
+1615057166864	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057167175	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057179382	Marionette	INFO	Stopped listening on port 65156
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057180178	geckodriver	INFO	Listening on 127.0.0.1:65230
+1615057183223	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileyoeIdj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057185538	Marionette	INFO	Listening on port 65239
+1615057587437	Marionette	INFO	Stopped listening on port 65239
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileKFho6o"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057286100	Marionette	INFO	Listening on port 65348
+1615057286548	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057286795	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057298968	Marionette	INFO	Stopped listening on port 65348
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057299797	geckodriver	INFO	Listening on 127.0.0.1:65420
+1615057334894	geckodriver	INFO	Listening on 127.0.0.1:65447
+1615057337934	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilegLBgY4"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057340234	Marionette	INFO	Listening on port 65458
+1615057340558	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057340800	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057353014	Marionette	INFO	Stopped listening on port 65458
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057353965	geckodriver	INFO	Listening on 127.0.0.1:65533
+1615057416925	geckodriver	INFO	Listening on 127.0.0.1:49191
+1615057419945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile0Vl1LA"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057422215	Marionette	INFO	Listening on port 49201
+1615057422570	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057422800	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057435019	Marionette	INFO	Stopped listening on port 49201
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057435849	geckodriver	INFO	Listening on 127.0.0.1:49273
+1615057438883	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileg6I4hu"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057441314	Marionette	INFO	Listening on port 49282
+1615057441506	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057441764	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615057442226	Marionette	INFO	Stopped listening on port 49282
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057461120	geckodriver	INFO	Listening on 127.0.0.1:49346
+1615057464150	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileNxjdi2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057466413	Marionette	INFO	Listening on port 49356
+1615057466771	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057467016	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057479287	Marionette	INFO	Stopped listening on port 49356
+1615057480145	geckodriver	INFO	Listening on 127.0.0.1:49432
+1615057483185	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile1gRDQu"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057485283	Marionette	INFO	Listening on port 49447
+1615057485323	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057485582	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615057488339	Marionette	INFO	Stopped listening on port 49447
+1615057489518	geckodriver	INFO	Listening on 127.0.0.1:49510
+1615057562386	geckodriver	INFO	Listening on 127.0.0.1:49663
+1615057565429	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilenI7jBe"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057567708	Marionette	INFO	Listening on port 49680
+1615057568052	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057568372	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057580571	Marionette	INFO	Stopped listening on port 49680
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057581408	geckodriver	INFO	Listening on 127.0.0.1:49762
+1615057584450	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilemibx66"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057586867	Marionette	INFO	Listening on port 49772
+1615057587074	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057587367	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615057588319	Marionette	INFO	Stopped listening on port 49772
+1615057589335	geckodriver	INFO	Listening on 127.0.0.1:49827
+1615057620070	geckodriver	INFO	Listening on 127.0.0.1:49848
+1615057623112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileep4MBL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057625175	Marionette	INFO	Listening on port 49858
+1615057625254	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057625513	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057637783	Marionette	INFO	Stopped listening on port 49858
+1615057638764	geckodriver	INFO	Listening on 127.0.0.1:49933
+1615057641795	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilee0AIFj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057643923	Marionette	INFO	Listening on port 49942
+1615057644422	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057644688	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615057659291	Marionette	INFO	Stopped listening on port 49942
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057660114	geckodriver	INFO	Listening on 127.0.0.1:50078
+1615057663142	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilehlQbcP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057665386	Marionette	INFO	Listening on port 50087
+1615057665771	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057666021	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615057668494	Marionette	INFO	Stopped listening on port 50087
+1615057682117	geckodriver	INFO	Listening on 127.0.0.1:50160
+1615057685159	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile1nxBba"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057687352	Marionette	INFO	Listening on port 50170
+1615057687793	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057688013	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057700225	Marionette	INFO	Stopped listening on port 50170
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057701046	geckodriver	INFO	Listening on 127.0.0.1:50246
+1615057704088	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileTKATd7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057706324	Marionette	INFO	Listening on port 50256
+1615057706719	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+1615057707176	Marionette	INFO	Stopped listening on port 50256
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057838991	geckodriver	INFO	Listening on 127.0.0.1:50374
+1615057842033	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilepAM6zF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057844120	Marionette	INFO	Listening on port 50383
+1615057844164	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057844452	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057856709	Marionette	INFO	Stopped listening on port 50383
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057857519	geckodriver	INFO	Listening on 127.0.0.1:50451
+1615057925409	geckodriver	INFO	Listening on 127.0.0.1:50495
+1615057928441	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileWGMt3n"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615057930770	Marionette	INFO	Listening on port 50505
+1615057931074	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615057931371	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615057943620	Marionette	INFO	Stopped listening on port 50505
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615057944556	geckodriver	INFO	Listening on 127.0.0.1:50582
+1615058001991	geckodriver	INFO	Listening on 127.0.0.1:50720
+1615058005032	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileCVt0p3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058007224	Marionette	INFO	Listening on port 50729
+1615058007660	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058007962	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058019161	Marionette	INFO	Stopped listening on port 50729
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615058019991	geckodriver	INFO	Listening on 127.0.0.1:50802
+1615058115046	geckodriver	INFO	Listening on 127.0.0.1:50867
+1615058118086	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiletKBFbV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058120148	Marionette	INFO	Listening on port 50877
+1615058120217	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058120550	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058130725	Marionette	INFO	Stopped listening on port 50877
+1615058131526	geckodriver	INFO	Listening on 127.0.0.1:50948
+1615058134568	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileYv4N8l"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058136679	Marionette	INFO	Listening on port 50958
+1615058136715	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058364982	Marionette	INFO	Stopped listening on port 50958
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileTWcL8S"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058330737	Marionette	INFO	Listening on port 51154
+1615058331059	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058331386	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058354161	Marionette	INFO	Stopped listening on port 51154
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615058355128	geckodriver	INFO	Listening on 127.0.0.1:51239
+1615058358159	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiletKb2UE"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058360291	Marionette	INFO	Listening on port 51249
+1615058360784	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058361031	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615058372221	Marionette	INFO	Stopped listening on port 51249
+1615058373023	geckodriver	INFO	Listening on 127.0.0.1:51317
+1615058509736	geckodriver	INFO	Listening on 127.0.0.1:51406
+1615058512767	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileRYHZdE"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058514942	Marionette	INFO	Listening on port 51417
+1615058515391	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058515628	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058538412	Marionette	INFO	Stopped listening on port 51417
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615058539186	geckodriver	INFO	Listening on 127.0.0.1:51493
+1615058571068	geckodriver	INFO	Listening on 127.0.0.1:51520
+1615058574108	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileNFCQet"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058576189	Marionette	INFO	Listening on port 51532
+1615058576245	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058576582	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058589369	Marionette	INFO	Stopped listening on port 51532
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615058590145	geckodriver	INFO	Listening on 127.0.0.1:51598
+1615058593184	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileFRQoZ0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058595264	Marionette	INFO	Listening on port 51607
+1615058595315	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1615058595830	Marionette	INFO	Stopped listening on port 51607
+1615058595884	geckodriver	INFO	Listening on 127.0.0.1:51646
+1615058642197	geckodriver	INFO	Listening on 127.0.0.1:51677
+1615058645744	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile7Z4it6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058647865	Marionette	INFO	Listening on port 51687
+1615058648377	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058648700	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058651578	Marionette	INFO	Stopped listening on port 51687
+1615058652406	geckodriver	INFO	Listening on 127.0.0.1:51756
+1615058655449	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilePPQw0u"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058657612	Marionette	INFO	Listening on port 51766
+1615058658070	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058658303	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615058666209	Marionette	INFO	Stopped listening on port 51766
+
+###!!! [Child][RunMessage] Error: Channel closing: too lat1615058669281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileKbUGFG"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058671576	Marionette	INFO	Listening on port 51845
+1615059486679	Marionette	INFO	Stopped listening on port 51845
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileu4KADA"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058818637	Marionette	INFO	Listening on port 51985
+1615058819101	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058819331	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615058822033	Marionette	INFO	Stopped listening on port 51985
+1615058822854	geckodriver	INFO	Listening on 127.0.0.1:52053
+1615058825896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileJk6AiD"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615058828107	Marionette	INFO	Listening on port 52065
+1615058828520	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615058828734	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615058831555	Marionette	INFO	Stopped listening on port 52065
+1615059193095	geckodriver	INFO	Listening on 127.0.0.1:52347
+1615059196135	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilelPT0Kr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059198339	Marionette	INFO	Listening on port 52359
+1615059198761	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059199167	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059200837	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615059202434	Marionette	INFO	Stopped listening on port 52359
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615059203256	geckodriver	INFO	Listening on 127.0.0.1:52427
+1615059206297	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileK3vcxy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059208375	Marionette	INFO	Listening on port 52436
+1615059208428	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059208689	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615059216665	Marionette	INFO	Stopped listening on port 52436
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615059342390	geckodriver	INFO	Listening on 127.0.0.1:52579
+1615059345421	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileDJHUPC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059347507	Marionette	INFO	Listening on port 52590
+1615059347560	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059347873	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059349583	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615059356768	Marionette	INFO	Stopped listening on port 52590
+1615059356929	geckodriver	INFO	Listening on 127.0.0.1:52663
+1615059359968	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilecTTszb"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059362188	Marionette	INFO	Listening on port 52674
+1615059362601	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059362823	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615059365603	Marionette	INFO	Stopped listening on port 52674
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615059366394	geckodriver	INFO	Listening on 127.0.0.1:52744
+1615059369436	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileLsZ1pa"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059371736	Marionette	INFO	Listening on port 52755
+1615059372055	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059372271	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615059375098	Marionette	INFO	Stopped listening on port 52755
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615059387080	geckodriver	INFO	Listening on 127.0.0.1:52829
+1615059390109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiledoK34H"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059392266	Marionette	INFO	Listening on port 52839
+1615059392736	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059392967	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059394697	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615059401309	Marionette	INFO	Stopped listening on port 52839
+1615059401344	geckodriver	INFO	Listening on 127.0.0.1:52911
+1615059533660	geckodriver	INFO	Listening on 127.0.0.1:52993
+1615059536700	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileihu4me"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059538772	Marionette	INFO	Listening on port 53002
+1615059538830	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059539109	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059540823	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615059542610	Marionette	INFO	Stopped listening on port 53002
+1615059543417	geckodriver	INFO	Listening on 127.0.0.1:53068
+1615059546461	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilelIYeQk"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059548628	Marionette	INFO	Listening on port 53077
+1615059549085	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059549296	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615059552032	Marionette	INFO	Stopped listening on port 53077
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615059552847	geckodriver	INFO	Listening on 127.0.0.1:53150
+1615059555879	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiler3fkYq"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615059557942	Marionette	INFO	Listening on port 53159
+1615059558015	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615059558278	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615059561089	Marionette	INFO	Stopped listening on port 53159
+1615060719491	geckodriver	INFO	Listening on 127.0.0.1:53954
+1615060722533	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilekhGUHK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060724739	Marionette	INFO	Listening on port 53965
+1615060725154	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060725485	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060727253	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060729033	Marionette	INFO	Stopped listening on port 53965
+1615060729838	geckodriver	INFO	Listening on 127.0.0.1:54028
+1615060732869	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilewXGpOw"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060735022	Marionette	INFO	Listening on port 54038
+1615060735490	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060735722	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615060738458	Marionette	INFO	Stopped listening on port 54038
+1615060739272	geckodriver	INFO	Listening on 127.0.0.1:54106
+1615060742313	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileroLze3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060744374	Marionette	INFO	Listening on port 54116
+1615060744443	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060744683	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060745323	Marionette	INFO	Stopped listening on port 54116
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615060746109	geckodriver	INFO	Listening on 127.0.0.1:54166
+1615060749148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileTQlxt9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060751252	Marionette	INFO	Listening on port 54176
+1615060751276	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060751523	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060754316	Marionette	INFO	Stopped listening on port 54176
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615060854502	geckodriver	INFO	Listening on 127.0.0.1:54290
+1615060857542	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileTRHTal"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060859672	Marionette	INFO	Listening on port 54300
+1615060860163	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060860402	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060863267	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060866362	Marionette	INFO	Stopped listening on port 54300
+1615060867180	geckodriver	INFO	Listening on 127.0.0.1:54367
+1615060870220	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileDfOdMU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060872399	Marionette	INFO	Listening on port 54376
+1615060872846	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060873082	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615060878223	Marionette	INFO	Stopped listening on port 54376
+1615060879074	geckodriver	INFO	Listening on 127.0.0.1:54448
+1615060882116	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileVIzpeL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060884238	Marionette	INFO	Listening on port 54459
+1615060884736	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060884964	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060885533	Marionette	INFO	Stopped listening on port 54459
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615060886311	geckodriver	INFO	Listening on 127.0.0.1:54518
+1615060889339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilezDcxf2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060891486	Marionette	INFO	Listening on port 54527
+1615060891969	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060892200	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060897802	Marionette	INFO	Stopped listening on port 54527
+1615060941563	geckodriver	INFO	Listening on 127.0.0.1:54620
+1615060944594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileoVfoES"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060946747	Marionette	INFO	Listening on port 54629
+1615060947217	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060947448	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060950305	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060953427	Marionette	INFO	Stopped listening on port 54629
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615060954239	geckodriver	INFO	Listening on 127.0.0.1:54703
+1615060957270	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilegMAY4c"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060959380	Marionette	INFO	Listening on port 54712
+1615060959414	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060959645	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615060964832	Marionette	INFO	Stopped listening on port 54712
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615060965674	geckodriver	INFO	Listening on 127.0.0.1:54784
+1615060968714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile7HM8J2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060970906	Marionette	INFO	Listening on port 54793
+1615060971347	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060971569	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060972684	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060973169	Marionette	INFO	Stopped listening on port 54793
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615060973995	geckodriver	INFO	Listening on 127.0.0.1:54860
+1615060977037	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile8MG9wv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615060979129	Marionette	INFO	Listening on port 54869
+1615060979175	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615060979442	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615060984950	Marionette	INFO	Stopped listening on port 54869
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615061030722	geckodriver	INFO	Listening on 127.0.0.1:54964
+1615061033764	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilesqnmzb"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615061035896	Marionette	INFO	Listening on port 54976
+1615061036388	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615061036681	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615061039558	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615061042671	Marionette	INFO	Stopped listening on port 54976
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615061043487	geckodriver	INFO	Listening on 127.0.0.1:55045
+1615061046529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile5rNtQe"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615061048654	Marionette	INFO	Listening on port 55055
+1615061049149	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615061049422	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615061054578	Marionette	INFO	Stopped listening on port 55055
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615061055410	geckodriver	INFO	Listening on 127.0.0.1:55128
+1615061058452	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilelNDdi2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615061060950	Marionette	INFO	Listening on port 55137
+1615061061082	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615061061323	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615061062529	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615061065055	Marionette	INFO	Stopped listening on port 55137
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615061065977	geckodriver	INFO	Listening on 127.0.0.1:55206
+1615061069009	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileHUgFsK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615061071343	Marionette	INFO	Listening on port 55215
+1615061071660	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615061072032	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615061077673	Marionette	INFO	Stopped listening on port 55215
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062452079	geckodriver	INFO	Listening on 127.0.0.1:56129
+1615062455120	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileSvOC9v"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062457448	Marionette	INFO	Listening on port 56139
+1615062457750	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062458092	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062461055	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062464680	Marionette	INFO	Stopped listening on port 56139
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062465622	geckodriver	INFO	Listening on 127.0.0.1:56210
+1615062468653	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileg5rhVS"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062470778	Marionette	INFO	Listening on port 56219
+1615062471275	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062471497	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615062476691	Marionette	INFO	Stopped listening on port 56219
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062477530	geckodriver	INFO	Listening on 127.0.0.1:56290
+1615062480561	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileKtC8o9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062482674	Marionette	INFO	Listening on port 56300
+1615062482695	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062482935	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062484089	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062496652	Marionette	INFO	Stopped listening on port 56300
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062497498	geckodriver	INFO	Listening on 127.0.0.1:56371
+1615062500542	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile0UOvit"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062502839	Marionette	INFO	Listening on port 56381
+1615062503163	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062503392	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062508923	Marionette	INFO	Stopped listening on port 56381
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062548359	geckodriver	INFO	Listening on 127.0.0.1:56467
+1615062551389	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilenL36ge"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062553648	Marionette	INFO	Listening on port 56477
+1615062554013	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062554251	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062557118	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062560250	Marionette	INFO	Stopped listening on port 56477
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062561209	geckodriver	INFO	Listening on 127.0.0.1:56548
+1615062564252	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile8FtO3S"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062566363	Marionette	INFO	Listening on port 56557
+1615062566390	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062566647	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615062571838	Marionette	INFO	Stopped listening on port 56557
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062572708	geckodriver	INFO	Listening on 127.0.0.1:56626
+1615062575748	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileIaWpUk"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062578046	Marionette	INFO	Listening on port 56635
+1615062578368	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062578780	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062579928	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: NotFoundError: WindowGlobalParent.getActor: No such JSWindowActor 'MarionetteCommands'
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:69
+unregisterCommandsActor@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:395:15
+GeckoDriver.prototype.deleteSession@chrome://marionette/content/driver.js:3009:5
+onClosed@chrome://marionette/content/server.js:196:17
+close@chrome://marionette/content/transport.js:225:18
+onInputStreamReady@chrome://marionette/content/transport.js:379:14
+
+1615062601903	Marionette	INFO	Stopped listening on port 56635
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062717416	geckodriver	INFO	Listening on 127.0.0.1:56786
+1615062720449	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilezQvs9p"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062722627	Marionette	INFO	Listening on port 56795
+1615062723081	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062723365	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062726275	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062729388	Marionette	INFO	Stopped listening on port 56795
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062730224	geckodriver	INFO	Listening on 127.0.0.1:56866
+1615062733253	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileorNpkZ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062735548	Marionette	INFO	Listening on port 56877
+1615062735878	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062736140	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615062741359	Marionette	INFO	Stopped listening on port 56877
+1615062742199	geckodriver	INFO	Listening on 127.0.0.1:56952
+1615062745239	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileG2t0X5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062747360	Marionette	INFO	Listening on port 56961
+1615062747862	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062748082	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062750701	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062767783	Marionette	INFO	Stopped listening on port 56961
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062768601	geckodriver	INFO	Listening on 127.0.0.1:57040
+1615062771621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileCqyeTo"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062773741	Marionette	INFO	Listening on port 57049
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+1615062774358	Marionette	INFO	Stopped listening on port 57049
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062902393	geckodriver	INFO	Listening on 127.0.0.1:57146
+1615062905435	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileu6tDa1"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062907560	Marionette	INFO	Listening on port 57158
+1615062908065	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062908328	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062911183	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062914279	Marionette	INFO	Stopped listening on port 57158
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062915130	geckodriver	INFO	Listening on 127.0.0.1:57226
+1615062918172	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilezz2LkX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062920409	Marionette	INFO	Listening on port 57235
+1615062920793	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062921036	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615062926183	Marionette	INFO	Stopped listening on port 57235
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062927049	geckodriver	INFO	Listening on 127.0.0.1:57304
+1615062930092	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileYkyM4T"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062932201	Marionette	INFO	Listening on port 57313
+1615062932223	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062932480	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062935127	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1615062951106	Marionette	INFO	Stopped listening on port 57313
+1615062951254	geckodriver	INFO	Listening on 127.0.0.1:57388
+1615062954294	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile5qXi3K"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062956515	Marionette	INFO	Listening on port 57397
+1615063685952	Marionette	INFO	Stopped listening on port 57397
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileJeQ1Sp"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062986442	Marionette	INFO	Listening on port 57462
+1615062986783	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062987042	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062989905	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615062993039	Marionette	INFO	Stopped listening on port 57462
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615062993894	geckodriver	INFO	Listening on 127.0.0.1:57535
+1615062996922	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileUadkGP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615062999088	Marionette	INFO	Listening on port 57544
+1615062999545	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615062999752	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615063004930	Marionette	INFO	Stopped listening on port 57544
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063005769	geckodriver	INFO	Listening on 127.0.0.1:57615
+1615063008809	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilezenUUK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063011048	Marionette	INFO	Listening on port 57625
+1615063011442	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063011666	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063014285	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063023807	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063044798	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063053382	Marionette	INFO	Stopped listening on port 57625
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063054402	geckodriver	INFO	Listening on 127.0.0.1:57718
+1615063057424	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileXRkoq5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063059602	Marionette	INFO	Listening on port 57728
+1615063060047	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063060266	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063065793	Marionette	INFO	Stopped listening on port 57728
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063104662	geckodriver	INFO	Listening on 127.0.0.1:58019
+1615063107692	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile2uLKdf"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063109834	Marionette	INFO	Listening on port 58028
+1615063110315	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063110630	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063112408	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063114439	Marionette	INFO	Stopped listening on port 58028
+1615063115283	geckodriver	INFO	Listening on 127.0.0.1:58303
+1615063118304	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilebYzSXZ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063121261	Marionette	INFO	Listening on port 58313
+1615063121459	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063121773	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615063125805	Marionette	INFO	Stopped listening on port 58313
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063127056	geckodriver	INFO	Listening on 127.0.0.1:58386
+1615063130095	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileeDVkZX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063132799	Marionette	INFO	Listening on port 58395
+1615063133222	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063133486	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063134434	Marionette	INFO	Stopped listening on port 58395
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063135385	geckodriver	INFO	Listening on 127.0.0.1:58459
+1615063138436	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilesaHzCz"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063140707	Marionette	INFO	Listening on port 58469
+1615063141054	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063141274	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063144282	Marionette	INFO	Stopped listening on port 58469
+1615063200877	geckodriver	INFO	Listening on 127.0.0.1:58564
+1615063203907	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileyVntKU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063206114	Marionette	INFO	Listening on port 58574
+1615063206541	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063206792	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063209712	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063212817	Marionette	INFO	Stopped listening on port 58574
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063213664	geckodriver	INFO	Listening on 127.0.0.1:58641
+1615063216704	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileTkQqEw"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063218933	Marionette	INFO	Listening on port 58650
+1615063219333	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063219575	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615063224777	Marionette	INFO	Stopped listening on port 58650
+1615063225612	geckodriver	INFO	Listening on 127.0.0.1:58718
+1615063228653	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiledEraS0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063230880	Marionette	INFO	Listening on port 58728
+1615063231276	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063231521	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063232655	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063236115	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063242125	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063244585	Marionette	INFO	Stopped listening on port 58728
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063245461	geckodriver	INFO	Listening on 127.0.0.1:58803
+1615063248501	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilexp3Q04"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063250725	Marionette	INFO	Listening on port 58813
+1615063251130	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063251369	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063256896	Marionette	INFO	Stopped listening on port 58813
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063723489	geckodriver	INFO	Listening on 127.0.0.1:59174
+1615063726519	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilejmAgs8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063728928	Marionette	INFO	Listening on port 59184
+1615063729153	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063729395	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063732297	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063735441	Marionette	INFO	Stopped listening on port 59184
+1615063736257	geckodriver	INFO	Listening on 127.0.0.1:59252
+1615063739285	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilel99oyI"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063741525	Marionette	INFO	Listening on port 59261
+1615063741910	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063742149	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615063747309	Marionette	INFO	Stopped listening on port 59261
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063748108	geckodriver	INFO	Listening on 127.0.0.1:59330
+1615063751151	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilewJt4PC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063753314	Marionette	INFO	Listening on port 59339
+1615063753774	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063754002	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063755150	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063758761	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063764704	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063767152	Marionette	INFO	Stopped listening on port 59339
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063767998	geckodriver	INFO	Listening on 127.0.0.1:59414
+1615063771040	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile3OGuyl"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063773173	Marionette	INFO	Listening on port 59423
+1615063773673	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615063773690	Marionette	INFO	Stopped listening on port 59423
+1615063814017	geckodriver	INFO	Listening on 127.0.0.1:59480
+1615063817060	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileUPT0e3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063819231	Marionette	INFO	Listening on port 59490
+1615063819693	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063820000	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063822934	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063826056	Marionette	INFO	Stopped listening on port 59490
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063826863	geckodriver	INFO	Listening on 127.0.0.1:59562
+1615063829903	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilePOywrr"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063832092	Marionette	INFO	Listening on port 59571
+1615063832528	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063832756	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615063837902	Marionette	INFO	Stopped listening on port 59571
+1615063838737	geckodriver	INFO	Listening on 127.0.0.1:59640
+1615063841779	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilePIRO54"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063843836	Marionette	INFO	Listening on port 59650
+1615063843907	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063844150	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063845307	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063848792	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063854713	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063857160	Marionette	INFO	Stopped listening on port 59650
+1615063857955	geckodriver	INFO	Listening on 127.0.0.1:59722
+1615063860994	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileqJGIeL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063863150	Marionette	INFO	Listening on port 59731
+1615063863614	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063863841	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063869403	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063874905	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063878497	Marionette	INFO	Stopped listening on port 59731
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615063978117	geckodriver	INFO	Listening on 127.0.0.1:59853
+1615063981146	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileVpuIVi"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063983225	Marionette	INFO	Listening on port 59862
+1615063983281	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063983547	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063986445	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615063989546	Marionette	INFO	Stopped listening on port 59862
+1615063990350	geckodriver	INFO	Listening on 127.0.0.1:59933
+1615063993378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilezM1r8R"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615063995599	Marionette	INFO	Listening on port 59943
+1615063996034	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615063996245	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615064001390	Marionette	INFO	Stopped listening on port 59943
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064002231	geckodriver	INFO	Listening on 127.0.0.1:60013
+1615064005263	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofiler3Jk2o"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064007380	Marionette	INFO	Listening on port 60022
+1615064007884	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064008102	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064009220	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064012673	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064018669	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064021129	Marionette	INFO	Stopped listening on port 60022
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064021950	geckodriver	INFO	Listening on 127.0.0.1:60098
+1615064024990	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilegT3VY0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064027138	Marionette	INFO	Listening on port 60107
+1615064027614	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064027836	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064033397	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064038898	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064042491	Marionette	INFO	Stopped listening on port 60107
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064195199	geckodriver	INFO	Listening on 127.0.0.1:60268
+1615064198245	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile7nHgdL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064200424	Marionette	INFO	Listening on port 60277
+1615064200875	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064201105	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064203968	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064207094	Marionette	INFO	Stopped listening on port 60277
+1615064207925	geckodriver	INFO	Listening on 127.0.0.1:60348
+1615064210946	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilemBmXy1"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064213101	Marionette	INFO	Listening on port 60357
+1615064213567	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064213779	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615064218945	Marionette	INFO	Stopped listening on port 60357
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064219776	geckodriver	INFO	Listening on 127.0.0.1:60429
+1615064222819	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile4BqtF6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064225097	Marionette	INFO	Listening on port 60439
+1615064225440	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064225676	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064226792	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064230242	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064236245	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064238701	Marionette	INFO	Stopped listening on port 60439
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064239513	geckodriver	INFO	Listening on 127.0.0.1:60511
+1615064242554	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileOYZlw3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064244728	Marionette	INFO	Listening on port 60520
+1615064245181	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064245403	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064269100	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064292592	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064305206	Marionette	INFO	Stopped listening on port 60520
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064402149	geckodriver	INFO	Listening on 127.0.0.1:60675
+1615064405189	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileRdsmgH"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064407409	Marionette	INFO	Listening on port 60684
+1615064407820	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064408143	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064411068	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064414151	Marionette	INFO	Stopped listening on port 60684
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064414998	geckodriver	INFO	Listening on 127.0.0.1:60757
+1615064418040	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileGZIiTy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064420157	Marionette	INFO	Listening on port 60766
+1615064420664	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064420891	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615064426069	Marionette	INFO	Stopped listening on port 60766
+1615064426881	geckodriver	INFO	Listening on 127.0.0.1:60835
+1615064429924	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilecRPGd9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064432103	Marionette	INFO	Listening on port 60845
+1615064432548	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064432811	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064433944	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064437415	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064443363	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064445816	Marionette	INFO	Stopped listening on port 60845
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064446639	geckodriver	INFO	Listening on 127.0.0.1:60918
+1615064449681	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofileoAY64y"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064451815	Marionette	INFO	Listening on port 60927
+1615064452302	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064462517	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064486138	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064509646	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064516134	Marionette	INFO	Stopped listening on port 60927
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064602353	geckodriver	INFO	Listening on 127.0.0.1:61073
+1615064605395	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile0PkgBi"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064607517	Marionette	INFO	Listening on port 61082
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.error: services.settings: 
+  main/cfr Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1615064608045	Marionette	INFO	Stopped listening on port 61082
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064706827	geckodriver	INFO	Listening on 127.0.0.1:61165
+1615064709872	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile25eRHY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064712186	Marionette	INFO	Listening on port 61177
+1615064712494	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064712841	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064715753	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064718876	Marionette	INFO	Stopped listening on port 61177
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064719710	geckodriver	INFO	Listening on 127.0.0.1:61248
+1615064722748	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofilebyPq9B"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064724855	Marionette	INFO	Listening on port 61257
+1615064725370	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064725596	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615064730746	Marionette	INFO	Stopped listening on port 61257
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615064731601	geckodriver	INFO	Listening on 127.0.0.1:61324
+1615064734645	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile61D1jw"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064736899	Marionette	INFO	Listening on port 61334
+1615064737271	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064737500	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064738629	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064742091	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064748131	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064750603	Marionette	INFO	Stopped listening on port 61334
+1615064751439	geckodriver	INFO	Listening on 127.0.0.1:61409
+1615064754480	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\haako\\AppData\\Local\\Temp\\rust_mozprofile7rEsFd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615064756625	Marionette	INFO	Listening on port 61419
+1615064757102	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064767327	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064790996	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: http://localhost:9090/scripts/scripts.js, line 36: TypeError: document.getElementById(...) is null
+1615064814547	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1615064838013	Marionette	INFO	Stopped listening on port 61419
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
