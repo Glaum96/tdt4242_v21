@@ -144,7 +144,8 @@ class WorkoutList(
             # - The workout has coach visibility and the requesting user is the owner's coach
             qs = Workout.objects.filter(
                 Q(visibility="PU")
-                | (Q(visibility="CO") & Q(owner__coach=self.request.user))
+                | (Q(visibility="CO") & (Q(owner__coach=self.request.user)) | Q(owner=self.request.user))
+                | (Q(visibility="PR") & Q(owner=self.request.user))
             ).distinct()
 
         return qs
@@ -255,7 +256,8 @@ class Leaderboards(APIView):
     
             for j in range(0, len(leaderboardNumbers)):
                 if leaderboardNumbers[j]['workout__owner__pk'] == currentLoggedInUser.pk:
-                    leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
+                    if j+1 > 5:
+                        leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
                     break
             else:
                 leaderboardResult.append({"name": currentLoggedInUser.username, "value": 0, "rank": len(leaderboardNumbers) + 1})
