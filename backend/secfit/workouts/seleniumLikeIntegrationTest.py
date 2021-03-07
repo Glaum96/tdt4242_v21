@@ -17,7 +17,7 @@ from datetime import datetime
 # Before running this test, remember to host the application on http://localhost:9090 using docker-compose up --build
 # in the main project folder
 
-# Test is run by: python seleniumLikeIntegrationTest.py (when in the workouts-folder)
+# Test is run by: python seleniumLikeIntegrationTest.py (when in the workouts-folder and while website is live with docker)
 class TestWorkoutLikes(unittest.TestCase):
 
     # Creates two unique usernames to be used in the tests;
@@ -90,7 +90,7 @@ class TestWorkoutLikes(unittest.TestCase):
         # Inputs values into fields
         workoutNameField.send_keys("TestWorkout")
         workoutDateField.clear();
-        workoutDateField.send_keys("2020-01-01 12:00");
+        workoutDateField.send_keys("1111-01-01 00:01");
         workoutNotesField.send_keys("This is an auto-generated workout meant for testing")
 
         time.sleep(1)
