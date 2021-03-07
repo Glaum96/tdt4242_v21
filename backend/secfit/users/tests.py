@@ -107,12 +107,6 @@ class RegisterEmailBoundaryTestCase(TestCase):
         request = self.client.post('http://testserver/api/users/', json.dumps(self.request), content_type='application/json')
         self.assertEquals(request.status_code,400)
 
-    def test_length15_password(self):
-        self.request["password"] = "Heiheiheiheihe1"
-        self.request["password1"] = "Heiheiheiheihe1"
-        request = self.client.post('http://testserver/api/users/', json.dumps(self.request), content_type='application/json')
-        self.assertEquals(request.status_code,201)
-
     def test_length16_password(self):
         self.request["password"] = "Heiheiheiheihei1"
         self.request["password1"] = "Heiheiheiheihei1"
