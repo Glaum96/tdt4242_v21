@@ -2,6 +2,7 @@ from django.test import TestCase
 from rest_framework.test import APIRequestFactory, APIClient
 import json
 from unittest import skip
+from users.models import User
 from datetime import datetime
 
 class RegisterUsernameBoundaryTestCase(TestCase):
@@ -334,6 +335,9 @@ class Register2WayDomainTestCase(TestCase):
         self.request = json.loads('{"username": "bob","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345678","country": "","city": "","street_address":""}')
         self.request1 = json.loads('{"username": "bob1","password": "Heihei1","password1": "Heihei1","athletes": [],"email": "bob1@bob.no","coach_files": [],"athlete_files": [],"workouts":[],"phone_number": "12345679","country": "","city": "","street_address":""}')
         self.client = APIClient()
+        User.objects.create(id="1",username="Bill",password="secret")
+        self.user_1 = User.objects.get(id="1")
+        self.client.force_authenticate(user=self.user_1)
         self.usernames = [["bob",True],["<<<", False],[["bob","bob"], False]]
         self.emails = [["bob@bob.no",True], ["bob",False], [["bob2@bob.no","bob2@bob.no"],False]]
         self.password = [[["Bobobo12", "Bobobo12"],True], [["bob","bob"],False], [["Bobobo12","Bobobo11"],False]]
@@ -341,6 +345,13 @@ class Register2WayDomainTestCase(TestCase):
         self.country = [["Norway",True],["Norway10",False]]
         self.city = [["Hei",True]]
         self.street_address = [["hei",True]]
+
+    def delete_user(self, id):
+        user = User.objects.get(id=id)
+        self.client.force_authenticate(user=user)
+        response = self.client.delete('http://testserver/api/users/'+str(id)+'/')
+        print(response.status_code)
+        
 
     def postUser(self,field,value,number,field1=None, value1=None,):
         request = [self.request.copy(),self.request1.copy()][number]
@@ -356,7 +367,8 @@ class Register2WayDomainTestCase(TestCase):
             else:
                 request[field1] = value1
         request = self.client.post('http://testserver/api/users/', json.dumps(request), content_type='application/json')
-        print(request.data)
+        if request.status_code == 201:
+            self.delete_user(request.data['id'])
         return request.status_code
 
     def get_status_for_posts(self,field1,value1,field2,value2):
@@ -387,115 +399,45 @@ class Register2WayDomainTestCase(TestCase):
         failures = []
         field1 = 'username'
         for username in self.usernames:
-            expected = username[1]
-            value = username[0]
+            value1 = username[0]
             for email in self.emails:
-                expectedstatus = expected and email[1]
                 field2 = 'email'
                 value2 = email[0]
-                value1 = ""
-                unique = self.getUniqueNumber()
-                if(isinstance(value,list)):
-                    value1 = []
-                    for i in range(len(value)):
-                        value1.append(value[i] + unique)
-                else:
-                    value1 = value + unique
+                expectedstatus = username[1] and email[1]
                 status = self.get_status_for_posts(field1,value1,field2,value2)
                 try: self.assertEquals((status == 201),expectedstatus)
-                except AssertionError: 
-                    failures.append({field1:value1,field2:value2})
+                except AssertionError: failures.append({field1:value1,field2:value2})
             for password in self.password:
-                
-                expectedstatus = expected and password[1]
-                field2 = 'password'
-                value2 = password[0]
-                value1 = ""
-                unique = self.getUniqueNumber()
-                if(isinstance(value,list)):
-                    value1 = []
-                    for i in range(len(value)):
-                        value1.append(value[i] + unique)
-                else:
-                    value1 = value + unique
-                status = self.get_status_for_posts_password(password[0],field1,value1)
+                expectedstatus = username[1] and password[1]
+                status = self.get_status_for_posts_password(password[0],field1,username[0])
                 try: self.assertEquals((status == 201),expectedstatus)
                 except AssertionError: failures.append({field1:value1,field2:value2})
-                
             for number in self.number:
-                
                 field2 = 'phone_number'
                 value2 = number[0]
-                value1 = ""
-                unique = self.getUniqueNumber()
-                if(isinstance(value,list)):
-                    value1 = []
-                    for i in range(len(value)):
-                        value1.append(value[i] + unique)
-                else:
-                    value1 = value + unique
-                expectedstatus = expected and number[1]
+                expectedstatus = username[1] and number[1]
                 status = self.get_status_for_posts(field1,value1,field2,value2)
                 try: self.assertEquals((status == 201),expectedstatus)
                 except AssertionError: failures.append({field1:value1,field2:value2})
-                
             for country in self.country:
-                
                 field2 = 'country'
                 value2 = country[0]
-                value1 = ""
-                unique = self.getUniqueNumber()
-                if(isinstance(value,list)):
-                    value1 = []
-                    for i in range(len(value)):
-                        value1.append(value[i] + unique)
-                else:
-                    value1 = value + unique
-                expectedstatus = expected and country[1]
+                expectedstatus = username[1] and country[1]
                 status = self.get_status_for_posts(field1,value1,field2,value2)
                 try: self.assertEquals((status == 201),expectedstatus)
                 except AssertionError: failures.append({field1:value1,field2:value2})
-                
             for city in self.city:
-                
                 field2 = 'city'
                 value2 = city[0]
-                value1 = ""
-                unique = self.getUniqueNumber()
-                if(isinstance(value,list)):
-                    value1 = []
-                    for i in range(len(value)):
-                        value1.append(value[i] + unique)
-                else:
-                    value1 = value + unique
-                expectedstatus = expected and city[1]
+                expectedstatus = username[1] and city[1]
                 status = self.get_status_for_posts(field1,value1,field2,value2)
                 try: self.assertEquals((status == 201),expectedstatus)
                 except AssertionError: failures.append({field1:value1,field2:value2})
-                
             for street_address in self.street_address:
-                
                 field2 = 'street_address'
                 value2 = street_address[0]
-                value1 = ""
-                unique = self.getUniqueNumber()
-                if(isinstance(value,list)):
-                    value1 = []
-                    for i in range(len(value)):
-                        value1.append(value[i] + unique)
-                else:
-                    value1 = value + unique
-                expectedstatus = expected and street_address[1]
+                expectedstatus = username[1] and street_address[1]
                 status = self.get_status_for_posts(field1,value1,field2,value2)
                 try: self.assertEquals((status == 201),expectedstatus)
-                except AssertionError: failures.append({field1:value1,field2:value2})
-                
+                except AssertionError: failures.append({field1:value1,field2:value2}) 
         print(failures)
-
-
-    def tearDown(self):
-        return super().tearDown()
-
-
-                
-
