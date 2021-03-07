@@ -4,6 +4,7 @@ import json
 from unittest import skip
 
 # Create your tests here.
+<<<<<<< backend/secfit/users/tests.py
 class RegisterUsernameBoundaryTestCase(TestCase):
 
     def setUp(self):
@@ -307,3 +308,22 @@ class RegisterAddressBoundaryTestCase(TestCase):
         request = self.client.post('http://testserver/api/users/', json.dumps(self.request), content_type='application/json')
         self.assertEquals(request.status_code,400)
     
+"""
+Tests for UserSerializers ./serializers.py
+"""
+
+class UserSerializerTestCase(TestCase):
+
+    def setUp(self):
+        #password = serializers.CharField(style={"input_type": "password"}, write_only=True)
+        #password1 = serializers.CharField(style={"input_type": "password"}, write_only=True)
+        pass
+
+    def test_validate_password(self):
+        pass
+
+    def test_create(self):
+        pass
+
+    def tearDown(self):
+        return super().tearDown()
