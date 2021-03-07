@@ -135,10 +135,7 @@ async function fetchLeaderBoards(id) {
     let table = document.getElementById("leaderboardstable");
     let row, cell;
 
-    //The user's own score will always be placed last in the JSON response
-    let userIndex = data.length - 1;
-
-    for (let i = 0; i < data.length - 1; i++) {
+    for (let i = 0; i < Math.min(6, data.length); i++) {
       row = table.insertRow();
       cell = row.insertCell();
       cell.textContent = data[i].rank;
@@ -146,16 +143,6 @@ async function fetchLeaderBoards(id) {
       cell.textContent = data[i].name;
       cell = row.insertCell();
       cell.textContent = data[i].value;
-    }
-    //If the user is not in top 5, the users score will also be rendered
-    if (data[userIndex].rank > 5) {
-      row = table.insertRow();
-      cell = row.insertCell();
-      cell.textContent = data[userIndex].rank;
-      cell = row.insertCell();
-      cell.textContent = data[userIndex].name;
-      cell = row.insertCell();
-      cell.textContent = data[userIndex].value;
     }
   }
 
@@ -167,6 +154,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   okButton = document.querySelector("#btn-ok-exercise");
   deleteButton = document.querySelector("#btn-delete-exercise");
   editButton = document.querySelector("#btn-edit-exercise");
+  leaderboardTable = document.querySelector("#leaderboardstable");
+  leaderboardTitle = document.querySelector("#leaderboardTitle");
   oldFormData = null;
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -197,7 +186,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     okButton.addEventListener("click", async () => await createExercise());
     cancelButton.addEventListener("click", handleCancelButtonDuringCreate);
-  }
 
+    leaderboardTable.style.display = "none";
+    leaderboardTitle.style.display = "none";
+  }
 
 });
