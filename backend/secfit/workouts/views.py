@@ -142,6 +142,8 @@ class WorkoutList(
             # - The workout has public visibility
             # - The owner of the workout is the requesting user
             # - The workout has coach visibility and the requesting user is the owner's coach
+            
+            # We found that his code has been edited so that private workouts are sent to the frontend if the requesting user is the owner. Otherwise the tests would fail.
             qs = Workout.objects.filter(
                 Q(visibility="PU")
                 | (Q(visibility="CO") & (Q(owner__coach=self.request.user)) | Q(owner=self.request.user))
@@ -256,7 +258,8 @@ class Leaderboards(APIView):
     
             for j in range(0, len(leaderboardNumbers)):
                 if leaderboardNumbers[j]['workout__owner__pk'] == currentLoggedInUser.pk:
-                    leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
+                    if j+1 > 5:
+                        leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
                     break
             else:
                 leaderboardResult.append({"name": currentLoggedInUser.username, "value": 0, "rank": len(leaderboardNumbers) + 1})
