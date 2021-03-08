@@ -612,10 +612,10 @@ class TestExerciseLeaderboard(unittest.TestCase):
 
         # What we expect the leaderboard to be like now
         expected_leaderboard = [
-            {"rank": "1", "username": self.__class__.uniqueUsername2, "score": "70"},
-            {"rank": "2", "username": self.__class__.uniqueUsername3, "score": "60"},
-            {"rank": "2", "username": self.__class__.uniqueUsername5, "score": "60"},
-            {"rank": "2", "username": self.__class__.uniqueUsername6, "score": "60"},
+            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "80"},
+            {"rank": "2", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "3", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "3", "username": self.__class__.uniqueUsername5, "score": "60"},
             {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
         ]
 
@@ -653,7 +653,7 @@ class TestExerciseLeaderboard(unittest.TestCase):
 
         # What we expect the leaderboard to be like now
         expected_leaderboard = [
-            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "100"},
+            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "120"},
             {"rank": "2", "username": self.__class__.uniqueUsername2, "score": "70"},
             {"rank": "3", "username": self.__class__.uniqueUsername3, "score": "60"},
             {"rank": "3", "username": self.__class__.uniqueUsername5, "score": "60"},
