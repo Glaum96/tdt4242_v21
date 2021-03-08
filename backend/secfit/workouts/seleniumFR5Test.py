@@ -68,7 +68,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Molde")
-        streetAddressField.send_keys("Oslo_suger")
+        streetAddressField.send_keys("Hovedgata")
 
         # Finds and clicks the button that creates the account
         createAccountButton = driver.find_element_by_id("btn-create-account")
@@ -94,7 +94,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         # Inputs values into fields
         workoutNameField.send_keys("TestWorkout")
         workoutDateField.clear()
-        workoutDateField.send_keys("2020-01-01 12:00")
+        workoutDateField.send_keys("1111-01-01 00:01")
         workoutNotesField.send_keys("This is an auto-generated workout meant for testing")
         workoutVisibilityField.send_keys("PR")
 
@@ -163,7 +163,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Molde")
-        streetAddressField.send_keys("Oslo_suger")
+        streetAddressField.send_keys("Hovedgata")
 
         # Finds and clicks the button that creates the account
         createAccountButton = driver.find_element_by_id("btn-create-account")
@@ -189,7 +189,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         # Inputs values into fields
         workoutNameField.send_keys("TestWorkout")
         workoutDateField.clear()
-        workoutDateField.send_keys("2020-01-01 12:00")
+        workoutDateField.send_keys("1111-01-01 00:01")
         workoutNotesField.send_keys("This is an auto-generated public workout meant for testing")
         workoutVisibilityField.send_keys("PU")
 
@@ -234,7 +234,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Oslo")
-        streetAddressField.send_keys("Molde_suger")
+        streetAddressField.send_keys("Sideveien")
 
         # Finds and clicks the button that creates the account
         createAccountButton = driver.find_element_by_id("btn-create-account")
@@ -264,7 +264,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         # 1. Athlete registers himself
         # 2. Athlete logs out
         # 3. Coach registers himself
-        # 4. Coach sendes coaching request to athlete
+        # 4. Coach sends coaching request to athlete
         # 5. Coach logs out
         # 6. Athlete logs in
         # 7. Athlete accepts the coaching request from the coach
@@ -304,7 +304,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Molde")
-        streetAddressField.send_keys("Oslo_suger")
+        streetAddressField.send_keys("Hovedgata")
 
         # Finds and clicks the button that creates the account
         createAccountButton = driver.find_element_by_id("btn-create-account")
@@ -344,7 +344,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         phoneNumberField.send_keys("12312312")
         countryField.send_keys("Norway")
         cityField.send_keys("Molde")
-        streetAddressField.send_keys("Oslo_suger")
+        streetAddressField.send_keys("Hovedgata")
 
         # Finds and clicks the button that creates the account
         createAccountButton = driver.find_element_by_id("btn-create-account")
@@ -429,7 +429,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         # Inputs values into fields
         workoutNameField.send_keys("TestWorkout")
         workoutDateField.clear()
-        workoutDateField.send_keys("2020-01-01 12:00")
+        workoutDateField.send_keys("1111-01-01 00:01")
         workoutNotesField.send_keys("This is an auto-generated coach workout meant for testing")
         workoutVisibilityField.send_keys("CO")
 
@@ -466,6 +466,8 @@ class AccessWorkoutTestCase(unittest.TestCase):
         time.sleep(0.5)
 
         # --- 11 ---
+        self.scroll_down()
+
         # Finds and clicks the new workout
         workoutElement = driver.find_elements_by_css_selector("a.list-group-item")[-1]
         workoutElement.click()
@@ -476,7 +478,7 @@ class AccessWorkoutTestCase(unittest.TestCase):
         workoutOwner = workoutOwnerField.get_attribute("value")
 
         #Tests that the owner name of the newly created workout matches the athletes name
-        self.assertEqual(workoutOwner,athlete_uniqueUsername)
+        self.assertEqual(workoutOwner, athlete_uniqueUsername)
 
         #Tests if all the page elements (workout details, files, and comments) are available on the page 
         self.assertTrue(self.check_workout_page_elements_exists())
