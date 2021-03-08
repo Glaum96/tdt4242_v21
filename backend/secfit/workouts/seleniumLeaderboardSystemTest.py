@@ -328,6 +328,8 @@ class TestExerciseLeaderboard(unittest.TestCase):
         # Logs in user 5
         self.login_user(self.__class__.uniqueUsername5)
 
+        self.scroll_down()
+
         # Finds and clicks the button that views the user's own workouts
         myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
         myWorkoutsButton.click()
@@ -366,11 +368,13 @@ class TestExerciseLeaderboard(unittest.TestCase):
 
     # Tests that when the user changes the visibility of a public workout to "coach", the score is decremented accordingly,
     # (the leaderboard should be correct in regard to size, rank and entrants.)
-    def test08_coach_workouts_made_private_decrement_leaderboard_score(self):
+    def test08_public_workouts_made_coach_decrement_leaderboard_score(self):
         driver = self.driver
 
         # Logs in user 4
         self.login_user(self.__class__.uniqueUsername4)
+
+        self.scroll_down()
 
         # Finds and clicks the button that views the user's own workouts
         myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
@@ -387,7 +391,7 @@ class TestExerciseLeaderboard(unittest.TestCase):
         editButton.click()
         time.sleep(1)
 
-        # Changes the visiblity to private
+        # Changes the visiblity to coach
         workoutVisibilityField = driver.find_element_by_id("inputVisibility")
         workoutVisibilityField.send_keys("CO")
 
@@ -407,6 +411,8 @@ class TestExerciseLeaderboard(unittest.TestCase):
         self.assert_leaderboard(expected_leaderboard)
 
 
+    # Tests that when the several users have the same score they also have the same rank,
+    # (the leaderboard should be correct in regard to size, rank and entrants.)
     def test09_same_score_is_same_rank(self):
         driver = self.driver
 
@@ -444,6 +450,221 @@ class TestExerciseLeaderboard(unittest.TestCase):
 
         # Asserts that the observed leaderboard matches the expected leaderboard
         self.assert_leaderboard(expected_leaderboard)
+
+
+    # Tests that when the user changes the visibility of a private workout to "public", the score is incremented accordingly,
+    # (the leaderboard should be correct in regard to size, rank and entrants.)
+    def test10_test_private_workout_made_public_increments_score(self):
+        driver = self.driver
+
+        # Logs in user 6
+        self.login_user(self.__class__.uniqueUsername6)
+
+        # Creates a new workout
+        self.register_workout_with_exercise("2")
+
+        # What we expect the leaderboard to be like now
+        expected_leaderboard = [
+            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "80"},
+            {"rank": "2", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "3", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "3", "username": self.__class__.uniqueUsername5, "score": "60"},
+            {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
+        ]
+
+        # Asserts that the observed leaderboard matches the expected leaderboard
+        self.assert_leaderboard(expected_leaderboard)
+
+        # Find and clicks the button to go to the workouts page
+        workoutNavButton = driver.find_element_by_id("nav-workouts")
+        workoutNavButton.click()
+        time.sleep(0.5)
+
+        self.scroll_down()
+
+        # Finds and clicks the button that views the user's own workouts
+        myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
+        myWorkoutsButton.click()
+        time.sleep(1)
+
+        # Views the workout
+        workout = driver.find_elements_by_css_selector("a.list-group-item")[-1]
+        workout.click()
+        time.sleep(1)
+
+        # Edits the workout
+        editButton = driver.find_element_by_id("btn-edit-workout")
+        editButton.click()
+        time.sleep(1)
+
+        # Changes the visiblity to private
+        workoutVisibilityField = driver.find_element_by_id("inputVisibility")
+        workoutVisibilityField.send_keys("PR")
+        saveEditChangesButton = driver.find_element_by_id("btn-ok-workout")
+        saveEditChangesButton.click()
+        time.sleep(1)
+
+        # What we expect the leaderboard to be like now
+        expected_leaderboard = [
+            {"rank": "1", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "2", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "2", "username": self.__class__.uniqueUsername5, "score": "60"},
+            {"rank": "2", "username": self.__class__.uniqueUsername6, "score": "60"},
+            {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
+        ]
+
+        # Asserts that the observed leaderboard matches the expected leaderboard
+        self.assert_leaderboard(expected_leaderboard)
+
+        # Find and clicks the button to go to the workouts page
+        workoutNavButton = driver.find_element_by_id("nav-workouts")
+        workoutNavButton.click()
+        time.sleep(0.5)
+
+        self.scroll_down()
+
+        # Finds and clicks the button that views the user's own workouts
+        myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
+        myWorkoutsButton.click()
+        time.sleep(1)
+
+        # Views the workout
+        workout = driver.find_elements_by_css_selector("a.list-group-item")[-1]
+        workout.click()
+        time.sleep(1)
+
+        # Edits the workout
+        editButton = driver.find_element_by_id("btn-edit-workout")
+        editButton.click()
+        time.sleep(1)
+
+        # Changes the visiblity to public
+        workoutVisibilityField = driver.find_element_by_id("inputVisibility")
+        workoutVisibilityField.send_keys("PU")
+        saveEditChangesButton = driver.find_element_by_id("btn-ok-workout")
+        saveEditChangesButton.click()
+        time.sleep(1)
+
+        # What we expect the leaderboard to be like now
+        expected_leaderboard = [
+            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "80"},
+            {"rank": "2", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "3", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "3", "username": self.__class__.uniqueUsername5, "score": "60"},
+            {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
+        ]
+
+        # Asserts that the observed leaderboard matches the expected leaderboard
+        self.assert_leaderboard(expected_leaderboard)
+
+
+    # Tests that when the user changes the visibility of a coach workout to "public", the score is incremented accordingly,
+    # (the leaderboard should be correct in regard to size, rank and entrants.)
+    def test11_test_coach_workout_made_public_increments_score(self):
+        driver = self.driver
+
+        # Logs in user 6
+        self.login_user(self.__class__.uniqueUsername6)
+
+        # Creates a new workout
+        self.register_workout_with_exercise("4")
+
+        # What we expect the leaderboard to be like now
+        expected_leaderboard = [
+            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "120"},
+            {"rank": "2", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "3", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "3", "username": self.__class__.uniqueUsername5, "score": "60"},
+            {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
+        ]
+
+        # Asserts that the observed leaderboard matches the expected leaderboard
+        self.assert_leaderboard(expected_leaderboard)
+
+        # Find and clicks the button to go to the workouts page
+        workoutNavButton = driver.find_element_by_id("nav-workouts")
+        workoutNavButton.click()
+        time.sleep(0.5)
+
+        self.scroll_down()
+
+        # Finds and clicks the button that views the user's own workouts
+        myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
+        myWorkoutsButton.click()
+        time.sleep(1)
+
+        # Views the workout
+        workout = driver.find_elements_by_css_selector("a.list-group-item")[-1]
+        workout.click()
+        time.sleep(1)
+
+        # Edits the workout
+        editButton = driver.find_element_by_id("btn-edit-workout")
+        editButton.click()
+        time.sleep(1)
+
+        # Changes the visiblity to private
+        workoutVisibilityField = driver.find_element_by_id("inputVisibility")
+        workoutVisibilityField.send_keys("CO")
+        saveEditChangesButton = driver.find_element_by_id("btn-ok-workout")
+        saveEditChangesButton.click()
+        time.sleep(1)
+
+        # What we expect the leaderboard to be like now
+        expected_leaderboard = [
+            {"rank": "1", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "2", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "2", "username": self.__class__.uniqueUsername5, "score": "60"},
+            {"rank": "2", "username": self.__class__.uniqueUsername6, "score": "60"},
+            {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
+        ]
+
+        # Asserts that the observed leaderboard matches the expected leaderboard
+        self.assert_leaderboard(expected_leaderboard)
+
+        # Find and clicks the button to go to the workouts page
+        workoutNavButton = driver.find_element_by_id("nav-workouts")
+        workoutNavButton.click()
+        time.sleep(0.5)
+
+        self.scroll_down()
+
+        # Finds and clicks the button that views the user's own workouts
+        myWorkoutsButton = driver.find_element_by_id("list-my-workouts-list")
+        myWorkoutsButton.click()
+        time.sleep(1)
+
+        # Views the workout
+        workout = driver.find_elements_by_css_selector("a.list-group-item")[-1]
+        workout.click()
+        time.sleep(1)
+
+        # Edits the workout
+        editButton = driver.find_element_by_id("btn-edit-workout")
+        editButton.click()
+        time.sleep(1)
+
+        # Changes the visiblity to public
+        workoutVisibilityField = driver.find_element_by_id("inputVisibility")
+        workoutVisibilityField.send_keys("PU")
+        saveEditChangesButton = driver.find_element_by_id("btn-ok-workout")
+        saveEditChangesButton.click()
+        time.sleep(1)
+
+        # What we expect the leaderboard to be like now
+        expected_leaderboard = [
+            {"rank": "1", "username": self.__class__.uniqueUsername6, "score": "100"},
+            {"rank": "2", "username": self.__class__.uniqueUsername2, "score": "70"},
+            {"rank": "3", "username": self.__class__.uniqueUsername3, "score": "60"},
+            {"rank": "3", "username": self.__class__.uniqueUsername5, "score": "60"},
+            {"rank": "5", "username": self.__class__.uniqueUsername1, "score": "50"},
+        ]
+
+        # Asserts that the observed leaderboard matches the expected leaderboard
+        self.assert_leaderboard(expected_leaderboard)
+
+
+
 
 
     # *Not a test*, just a cleanup that deletes the workout that was created during the other tests. Tried using
