@@ -664,9 +664,6 @@ class TestExerciseLeaderboard(unittest.TestCase):
         self.assert_leaderboard(expected_leaderboard)
 
 
-
-
-
     # *Not a test*, just a cleanup that deletes the workout that was created during the other tests. Tried using
     # tearDownClass, but that did not let me access the website
     def test99_cleanup(self):
