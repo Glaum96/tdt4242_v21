@@ -17,7 +17,7 @@ from datetime import datetime
 # Before running this test, remember to host the application on http://localhost:9090 using docker-compose up --build
 # in the main project folder
 
-# Test is run by: python seleniumLikeIntegrationTest.py (when in the workouts-folder)
+# Test is run by: python seleniumFR5Test.py (when in the workouts-folder)
 class AccessWorkoutTestCase(unittest.TestCase):
 
     # Creates two unique usernames to be used in the tests;
