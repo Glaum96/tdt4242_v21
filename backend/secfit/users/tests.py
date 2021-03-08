@@ -14,6 +14,11 @@ from unittest import skip
 from users.models import User
 from datetime import datetime
 
+# -------------------------------------------------------------------------------------------------
+# Boundary value tests
+# -------------------------------------------------------------------------------------------------
+
+
 class RegisterUsernameBoundaryTestCase(TestCase):
 
     def setUp(self):
@@ -440,6 +445,11 @@ class UserSerializerTestCase(TestCase):
 
     def tearDown(self):
         return super().tearDown()
+
+# -------------------------------------------------------------------------------------------------
+# 2 Way domain tests
+# -------------------------------------------------------------------------------------------------
+
 
 class Register2WayDomainTestCase(TestCase):
 
