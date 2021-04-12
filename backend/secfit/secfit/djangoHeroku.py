@@ -50,7 +50,7 @@ def databasesettings(config, db_colors):
         if 'CI' in os.environ:
             config['DATABASES']['default']['TEST'] = config['DATABASES']['default']
 
-def staticsettins(config):
+def staticsettings(config):
     config['STATIC_ROOT'] = os.path.join(config['BASE_DIR'], 'staticfiles')
     config['STATIC_URL'] = '/static/'
 
