@@ -18,7 +18,7 @@ def settings(config, *, db_colors=False, databases=True, test_runner=True, stati
 
     # Staticfiles configuration.
     if staticfiles:
-        configsettings(config)
+        staticsettings(config)
 
     if allowed_hosts:
         config['ALLOWED_HOSTS'] = ['*']
