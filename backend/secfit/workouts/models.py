@@ -153,13 +153,10 @@ class RememberMe(models.Model):
         return self.remember_me
 
 
-# Likes for a workout
 class WorkoutLike(models.Model):
 
-    # The workout that is being liked
     workoutToLike = models.ForeignKey(Workout, on_delete=models.CASCADE)
 
-    # The user doing the liking
     userLiking = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, related_name="userLiking"
     )
