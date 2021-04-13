@@ -65,7 +65,7 @@ async function fetchWorkouts(ordering) {
 
 
             container.appendChild(aWorkout);
-        };
+        }
         return workouts;
     }
 }
@@ -171,9 +171,6 @@ function generateClones(button) {
       clone.parentNode.removeChild(clone);
       clearTimeout(removeNodeTimeout);
     }, 900);
-    let removeClassTimeout = setTimeout( function() {
-      button.classList.remove("animated")
-    }, 600);
   }
 }
 
