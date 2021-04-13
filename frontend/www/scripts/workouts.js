@@ -7,67 +7,76 @@ async function fetchWorkouts(ordering) {
         let data = await response.json();
 
         let workouts = data.results;
-        let container = document.getElementById('div-content');
+        
+        await convertWorkoutDataToFrontend(workouts);
 
-        for(const workout of workouts){
-
-            let workoutLikes = await sendRequest("GET", `${HOST}/api/workoutLiking/${workout.id}`);
-
-            let workoutLikesData = [true, 1]
-
-            if(workoutLikes.ok){
-                workoutLikesData = await workoutLikes.json()
-            }
-
-            let templateWorkout = document.querySelector("#template-workout");
-            let cloneWorkout = templateWorkout.content.cloneNode(true);
-
-            let aWorkout = cloneWorkout.querySelector("a");
-            aWorkout.href = `workout.html?id=${workout.id}`;
-
-            let h5 = aWorkout.querySelector("h5");
-            h5.textContent = workout.name;
-
-            let localDate = new Date(workout.date);
-
-            let table = aWorkout.querySelector("table");
-            let rows = table.querySelectorAll("tr");
-            rows[0].querySelectorAll("td")[1].textContent = localDate.toLocaleDateString(); // Date
-            rows[1].querySelectorAll("td")[1].textContent = localDate.toLocaleTimeString(); // Time
-            rows[2].querySelectorAll("td")[1].textContent = workout.owner_username; //Owner
-            rows[3].querySelectorAll("td")[1].textContent = workout.exercise_instances.length; // Exercises
-
-            rows[4].querySelectorAll("td")[1].textContent = workoutLikesData[1]
-
-            let likeButton = rows[4].querySelectorAll("td")[2].querySelector(".like-button")
-
-            if(!workoutLikesData[0]){
-                likeButton.classList.add("active")
-            }
-
-            likeButton.addEventListener("click", async function(e) {
-                e.preventDefault();
-
-                if(!this.classList.contains("active")){
-                    this.classList.add("active");
-                    this.classList.add("animated");
-                    generateClones(this);
-
-                    let likeWorkoutResponse = await sendRequest("POST", `${HOST}/api/workoutLiking/${workout.id}/`, {});
-
-                    if(likeWorkoutResponse.ok){
-                        let likeWorkoutData = await likeWorkoutResponse.json()
-                        rows[4].querySelectorAll("td")[1].textContent = likeWorkoutData[1]
-                        likeButton.classList.add("active")
-                    }
-                }
-            })
-
-
-            container.appendChild(aWorkout);
-        }
         return workouts;
     }
+}
+
+async function convertWorkoutDataToFrontend(workouts){
+    let container = document.getElementById('div-content');
+
+    for(const workout of workouts){
+
+        let workoutLikes = await sendRequest("GET", `${HOST}/api/workoutLiking/${workout.id}`);
+
+        let workoutLikesData = [true, 1]
+
+        if(workoutLikes.ok){
+            workoutLikesData = await workoutLikes.json()
+        }
+
+        let templateWorkout = document.querySelector("#template-workout");
+        let cloneWorkout = templateWorkout.content.cloneNode(true);
+
+        let aWorkout = cloneWorkout.querySelector("a");
+        aWorkout.href = `workout.html?id=${workout.id}`;
+
+        let h5 = aWorkout.querySelector("h5");
+        h5.textContent = workout.name;
+
+        let localDate = new Date(workout.date);
+
+        let table = aWorkout.querySelector("table");
+        let rows = table.querySelectorAll("tr");
+        rows[0].querySelectorAll("td")[1].textContent = localDate.toLocaleDateString(); // Date
+        rows[1].querySelectorAll("td")[1].textContent = localDate.toLocaleTimeString(); // Time
+        rows[2].querySelectorAll("td")[1].textContent = workout.owner_username; //Owner
+        rows[3].querySelectorAll("td")[1].textContent = workout.exercise_instances.length; // Exercises
+
+        rows[4].querySelectorAll("td")[1].textContent = workoutLikesData[1]
+
+        let likeButton = rows[4].querySelectorAll("td")[2].querySelector(".like-button")
+
+        if(!workoutLikesData[0]){
+            likeButton.classList.add("active")
+        }
+
+        await addEventListenersForLikeButtons(workout, likeButton, rows);
+
+        container.appendChild(aWorkout);
+    }
+}
+
+async function addEventListenersForLikeButtons(workout, likeButton, rows){
+    likeButton.addEventListener("click", async function(e) {
+        e.preventDefault();
+
+        if(!this.classList.contains("active")){
+            this.classList.add("active");
+            this.classList.add("animated");
+            generateClones(this);
+
+            let likeWorkoutResponse = await sendRequest("POST", `${HOST}/api/workoutLiking/${workout.id}/`, {});
+
+            if(likeWorkoutResponse.ok){
+                let likeWorkoutData = await likeWorkoutResponse.json()
+                rows[4].querySelectorAll("td")[1].textContent = likeWorkoutData[1]
+                likeButton.classList.add("active")
+            }
+        }
+    })
 }
 
 function createWorkout() {
