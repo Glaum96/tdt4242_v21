@@ -98,7 +98,6 @@ class OfferList(
         serializer.save(owner=self.request.user)
 
     def get_queryset(self):
-        qs = Offer.objects.none()
         result = Offer.objects.none()
 
         if self.request.user:
@@ -106,22 +105,22 @@ class OfferList(
                 Q(owner=self.request.user) | Q(recipient=self.request.user)
             ).distinct()
             qp = self.request.query_params
-            u = self.request.user
+            user = self.request.user
 
             # filtering by status (if provided)
-            s = qp.get("status", None)
-            if s is not None and self.request is not None:
-                qs = qs.filter(status=s)
+            status = qp.get("status", None)
+            if status is not None and self.request is not None:
+                qs = qs.filter(status=status)
                 if qp.get("status", None) is None:
-                    qs = Offer.objects.filter(Q(owner=u)).distinct()
+                    qs = Offer.objects.filter(Q(owner=user)).distinct()
 
             # filtering by category (sent or received)
-            c = qp.get("category", None)
-            if c is not None and qp is not None:
-                if c == "sent":
-                    qs = qs.filter(owner=u)
-                elif c == "received":
-                    qs = qs.filter(recipient=u)
+            category = qp.get("category", None)
+            if category is not None and qp is not None:
+                if category == "sent":
+                    qs = qs.filter(owner=user)
+                elif category == "received":
+                    qs = qs.filter(recipient=user)
             return qs
         else:
             return result
