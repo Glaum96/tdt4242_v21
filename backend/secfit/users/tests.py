@@ -727,3 +727,41 @@ class Register2WayDomainTestCase(TestCase):
                     try: self.assertEquals((status == 201),expectedstatus)
                     except AssertionError: failures.append({field1:value1,field2:value2}) 
             print(failures)
+
+class offerlistTestCase(TestCase):
+
+    def setUp(self):
+        User.objects.create(id="1",username="Bill",password="secret", email="hei")
+        self.user_1 = User.objects.get(id="1")
+        self.client = APIClient()
+        self.client.force_authenticate(user=self.user_1)
+        User.objects.create(id="2",username="Bill2",password="secret", email="hei1")
+        self.user_2 = User.objects.get(id="2")
+        self.client2 = APIClient()
+        self.client2.force_authenticate(user=self.user_2)
+        User.objects.create(id="3",username="Bill1",password="secret", email="hei2")
+        self.user_3 = User.objects.get(id="3")
+        self.client3 = APIClient()
+        self.client3.force_authenticate(user=self.user_3)
+        self.recURL = "http://testserver/api/offers/?status=p&category=received"
+        self.sentURL = "http://testserver/api/offers/?status=p&category=sent"
+    
+    def test_recipient(self):
+        post = self.client.post("http://testserver/api/offers/",{"status":"p","recipient":"http://testserver/api/users/2/"},format='json')
+        self.assertEquals(post.status_code, 201)
+        get = self.client.get(self.recURL)
+        self.assertEquals(dict(get.data)["count"],0)
+        get = self.client2.get(self.recURL)
+        self.assertEquals(dict(get.data)["count"],1)
+        get = self.client3.get(self.recURL)
+        self.assertEquals(dict(get.data)["count"],0)
+
+    def test_sent(self):
+        post = self.client.post("http://testserver/api/offers/",{"status":"p","recipient":"http://testserver/api/users/2/"},format='json')
+        self.assertEquals(post.status_code, 201)
+        get = self.client.get(self.sentURL)
+        self.assertEquals(dict(get.data)["count"],1)
+        get = self.client2.get(self.sentURL)
+        self.assertEquals(dict(get.data)["count"],0)
+        get = self.client3.get(self.sentURL)
+        self.assertEquals(dict(get.data)["count"],0)
