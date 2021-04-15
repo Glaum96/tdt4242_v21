@@ -1,7 +1,6 @@
 import django
-from rest_framework import mixins, generics
+from rest_framework import mixins, generics, permissions
 from workouts.mixins import CreateListModelMixin
-from rest_framework import permissions
 from users.serializers import (
     UserSerializer,
     OfferSerializer,
