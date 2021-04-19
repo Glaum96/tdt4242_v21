@@ -226,6 +226,39 @@ class WorkoutsExerciseBoundaryTestCase(TestCase):
         self.assertEquals(request.status_code,400)
 
 # -------------------------------------------------------------------------------------------------
+# Tests for refactored code in workouts/serializers.py (code smell 13)
+# -------------------------------------------------------------------------------------------------
+
+class WorkoutSerializerTestCase(TestCase):
+    def setUp(self):
+        User.objects.create(id="1",username="Bill",password="secret")
+        self.user_1 = User.objects.get(id="1")
+        Workout.objects.create(id="1",name="workout",date=timezone.now(),owner=self.user_1,visibility="PU")
+        self.client_1 = APIClient()
+
+    def test_handle_files(self):
+        self.client_1.force_authenticate(user=self.user_1)
+        workout = self.client_1.get(path="http://testserver/api/workouts/1/")
+        self.assertEqual(len(workout.data['files']),0)
+        
+        new_workout_data = workout.data
+        new_workout_data['files'] = ["INSERT NEW FILE HERE"]
+        self.client_1.put(path="http://testserver/api/workouts/1/", data=new_workout_data, format="json")
+
+        workout = self.client_1.get(path="http://testserver/api/workouts/1/")
+        #self.assertEqual(len(workout.data['files']),1)
+
+        new_workout_data = workout.data
+        new_workout_data['files'] = []
+        self.client_1.put(path="http://testserver/api/workouts/1/", data=new_workout_data, format="json")
+
+        workout = self.client_1.get(path="http://testserver/api/workouts/1/")
+        self.assertEqual(len(workout.data['files']),0)
+
+    def tearDown(self):
+        return super().tearDown()
+
+# -------------------------------------------------------------------------------------------------
 # Tests for remember_me functionality 
 # -------------------------------------------------------------------------------------------------
 
