@@ -111,11 +111,10 @@ class OfferList(
 
             # filtering by category (sent or received)
             category = self.request.query_params.get("category", None)
-            if category is not None:
-                if category == "sent":
-                    qs = qs.filter(owner=self.request.user)
-                elif category == "received":
-                    qs = qs.filter(recipient=self.request.user)
+            if category == "sent":
+                qs = qs.filter(owner=self.request.user)
+            elif category == "received":
+                qs = qs.filter(recipient=self.request.user)
 
         return qs
 
