@@ -96,7 +96,6 @@ if is_prod:
 
 if 'DATABASE_URL' in os.environ:
     import dj_database_url
-    print("\n\n\n\n\nHEI\n\n\n\n\n\n")
     DATABASES = {'default': dj_database_url.config()}
 else:
     DATABASES = {
@@ -139,20 +138,6 @@ STATIC_URL = "/static/"
 # MEDIA FILES
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
-
-
-# REST_FRAMEWORK = {
-#     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-#     "PAGE_SIZE": 10,
-#     #"DEFAULT_AUTHENTICATION_CLASSES": (
-#     #    "rest_framework_simplejwt.authentication.JWTAuthentication",
-#     #),
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         # 'rest_framework.authentication.SessionAuthentication',
-#         "rest_framework_simplejwt.authentication.JWTAuthentication"
-#     ),
-# }
-
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",

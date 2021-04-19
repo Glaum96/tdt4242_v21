@@ -1,7 +1,6 @@
 import django
-from rest_framework import mixins, generics
+from rest_framework import mixins, generics, permissions
 from workouts.mixins import CreateListModelMixin
-from rest_framework import permissions
 from users.serializers import (
     UserSerializer,
     OfferSerializer,
@@ -99,32 +98,26 @@ class OfferList(
 
     def get_queryset(self):
         qs = Offer.objects.none()
-        result = Offer.objects.none()
 
         if self.request.user:
             qs = Offer.objects.filter(
                 Q(owner=self.request.user) | Q(recipient=self.request.user)
             ).distinct()
-            qp = self.request.query_params
-            u = self.request.user
 
             # filtering by status (if provided)
-            s = qp.get("status", None)
-            if s is not None and self.request is not None:
-                qs = qs.filter(status=s)
-                if qp.get("status", None) is None:
-                    qs = Offer.objects.filter(Q(owner=u)).distinct()
+            status = self.request.query_params.get("status", None)
+            if status is not None:
+                qs = qs.filter(status=status)
 
             # filtering by category (sent or received)
-            c = qp.get("category", None)
-            if c is not None and qp is not None:
-                if c == "sent":
-                    qs = qs.filter(owner=u)
-                elif c == "received":
-                    qs = qs.filter(recipient=u)
-            return qs
-        else:
-            return result
+            category = self.request.query_params.get("category", None)
+            if category == "sent":
+                qs = qs.filter(owner=self.request.user)
+            elif category == "received":
+                qs = qs.filter(recipient=self.request.user)
+
+        return qs
+
 
 
 class OfferDetail(

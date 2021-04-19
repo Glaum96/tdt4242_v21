@@ -1,18 +1,14 @@
 """Contains views for the workouts application. These are mostly class-based views.
 """
-from rest_framework import generics, mixins
-from rest_framework import permissions
-
+from rest_framework import generics, mixins, permissions, status, filters
 from rest_framework.parsers import (
     JSONParser,
 )
 import json
-from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from django.db.models import Q, Sum, F, IntegerField
-from rest_framework import filters
 from workouts.parsers import MultipartJsonParser
 from workouts.permissions import (
     IsOwner,
@@ -25,17 +21,12 @@ from workouts.permissions import (
 )
 from workouts.mixins import CreateListModelMixin
 from workouts.models import Workout, Exercise, ExerciseInstance, WorkoutFile, WorkoutLike
-from workouts.serializers import WorkoutSerializer, ExerciseSerializer
-from workouts.serializers import RememberMeSerializer
-from workouts.serializers import ExerciseInstanceSerializer, WorkoutFileSerializer
+from workouts.serializers import WorkoutSerializer, ExerciseSerializer, RememberMeSerializer, ExerciseInstanceSerializer, WorkoutFileSerializer
 from django.core.exceptions import PermissionDenied
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.response import Response
-import json
 from collections import namedtuple
 import base64, pickle
 from django.core.signing import Signer
-
 from users.models import User
 from rest_framework.views import APIView
 
@@ -76,10 +67,10 @@ class RememberMe(
             return Response({"remember_me": self.rememberme()})
 
     def post(self, request):
-        cookieObject = namedtuple("Cookies", request.COOKIES.keys())(
+        cookie_object = namedtuple("Cookies", request.COOKIES.keys())(
             *request.COOKIES.values()
         )
-        user = self.get_user(cookieObject)
+        user = self.get_user(cookie_object)
         refresh = RefreshToken.for_user(user)
         return Response(
             {
@@ -88,8 +79,8 @@ class RememberMe(
             }
         )
 
-    def get_user(self, cookieObject):
-        decode = base64.b64decode(cookieObject.remember_me)
+    def get_user(self, cookie_object):
+        decode = base64.b64decode(cookie_object.remember_me)
         user, sign = pickle.loads(decode)
 
         # Validate signature
@@ -237,34 +228,38 @@ class Leaderboards(APIView):
         # User must be logged in
         if self.request.user:
     
-            leaderboardNumbers = ExerciseInstance.objects.filter(Q(exercise__pk=pk) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField())).order_by('-amount')
-    
-            leaderboardResult = []
-    
-            # Iterates through the top 5 entries in the leaderboard and formats it correctly
-            for i in range(0, min(5, len(leaderboardNumbers))):
-                leaderboardResult.append({"name": User.objects.get(pk=leaderboardNumbers[i]['workout__owner__pk']).username, "value": leaderboardNumbers[i]['amount']})
-    
-                # Applies the rank to the leaderboard entry; if two or more users have the score they get the same rank
-                if i > 0 and leaderboardNumbers[i-1]["amount"] == leaderboardNumbers[i]["amount"]:
-                    leaderboardResult[i]["rank"] = leaderboardResult[i-1]["rank"]
-                else:
-                    leaderboardResult[i]["rank"] = i+1
-    
-            # Finds the user in the leaderboard list. If the user is not in the leaderboard list,
-            # the user is automatically given a score of 0 and the worst rank
+            leaderboard_numbers = ExerciseInstance.objects.filter(Q(exercise__pk=pk) & Q(workout__visibility='PU')).values('workout__owner__pk').annotate(amount=Sum(F("sets") * F("number"), output_field=IntegerField())).order_by('-amount')
+            leaderboard_result = []
 
-            currentLoggedInUser = self.request.user
+            self.addtop5(leaderboard_result, leaderboard_numbers)
+            current_logged_in_user = self.request.user
     
-            for j in range(0, len(leaderboardNumbers)):
-                if leaderboardNumbers[j]['workout__owner__pk'] == currentLoggedInUser.pk:
-                    if j+1 > 5:
-                        leaderboardResult.append({"name": currentLoggedInUser.username, "value": leaderboardNumbers[j]["amount"], "rank": j+1})
-                    break
+            self.adduserscore(current_logged_in_user, leaderboard_result, leaderboard_numbers)
+
+            return Response(leaderboard_result)
+
+    def addtop5(self, leaderboard_result, leaderboard_numbers):
+        # Iterates through the top 5 entries in the leaderboard and formats it correctly
+        for i in range(0, min(5, len(leaderboard_numbers))):
+            leaderboard_result.append({"name": User.objects.get(pk=leaderboard_numbers[i]['workout__owner__pk']).username, "value": leaderboard_numbers[i]['amount']})
+
+            # Applies the rank to the leaderboard entry; if two or more users have the score they get the same rank
+            if i > 0 and leaderboard_numbers[i-1]["amount"] == leaderboard_numbers[i]["amount"]:
+                leaderboard_result[i]["rank"] = leaderboard_result[i-1]["rank"]
             else:
-                leaderboardResult.append({"name": currentLoggedInUser.username, "value": 0, "rank": len(leaderboardNumbers) + 1})
+                leaderboard_result[i]["rank"] = i+1
 
-            return Response(leaderboardResult)
+    def adduserscore(self, current_logged_in_user, leaderboard_result, leaderboard_numbers):
+        # Finds the user in the leaderboard list. If the user is not in the leaderboard list,
+        # the user is automatically given a score of 0 and the worst rank
+
+        for j in range(0, len(leaderboard_numbers)):
+            if leaderboard_numbers[j]['workout__owner__pk'] == current_logged_in_user.pk:
+                if j+1 > 5:
+                    leaderboard_result.append({"name": current_logged_in_user.username, "value": leaderboard_numbers[j]["amount"], "rank": j+1})
+                break
+        else:
+            leaderboard_result.append({"name": current_logged_in_user.username, "value": 0, "rank": len(leaderboard_numbers) + 1})
 
 
 class ExerciseInstanceList(
@@ -395,25 +390,25 @@ class WorkoutLiking(APIView):
     # and the workout has not been liked before), and the amount of likes that the workout has
     def get(self, request, pk):
 
-        likingAllowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
+        liking_allowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
             Q(userLiking=self.request.user) & Q(workoutToLike__pk=pk)).count() == 0
 
-        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
+        like_amount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
 
-        return Response((likingAllowed, likeAmount), status.HTTP_200_OK)
+        return Response((liking_allowed, like_amount), status.HTTP_200_OK)
 
     # Tries to like a new post and returns the same as the GET above
     def post(self, request, pk):
 
-        likingAllowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
+        liking_allowed = Workout.objects.get(pk=pk).owner != self.request.user and WorkoutLike.objects.filter(
             Q(userLiking=self.request.user) & Q(workoutToLike__pk=pk)).count() == 0
 
-        likeAmount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
+        like_amount = WorkoutLike.objects.filter(Q(workoutToLike__pk=pk)).count() + 1
 
-        if likingAllowed:
-            newWorkoutLike = WorkoutLike(workoutToLike=Workout.objects.get(pk=pk), userLiking=self.request.user)
-            newWorkoutLike.save()
+        if liking_allowed:
+            new_workout_like = WorkoutLike(workoutToLike=Workout.objects.get(pk=pk), userLiking=self.request.user)
+            new_workout_like.save()
 
-            return Response((False, likeAmount + 1), status.HTTP_201_CREATED)
+            return Response((False, like_amount + 1), status.HTTP_201_CREATED)
 
-        return Response((likingAllowed, likeAmount), status.HTTP_100_CONTINUE)
+        return Response((liking_allowed, like_amount), status.HTTP_100_CONTINUE)

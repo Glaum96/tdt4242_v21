@@ -3,6 +3,8 @@ let okButton;
 let deleteButton;
 let editButton;
 let oldFormData;
+let leaderboardTable;
+let leaderboardTitle;
 
 function handleCancelButtonDuringEdit() {
   setReadOnly(true, "#form-exercise");
@@ -127,7 +129,6 @@ async function updateExercise(id) {
 
 async function fetchLeaderBoards(id) {
 
-  // Fetches leaderboard data
   let response = await sendRequest("GET", `${HOST}/api/leaderboards/${id}/`);
   let data = await response.json();
 
