@@ -8,9 +8,8 @@ MAX_CONN_AGE = 600
 def settings(config, *, db_colors=False, databases=True, test_runner=True, staticfiles=True, allowed_hosts=True, logging=True, secret_key=True):
 
     # Database configuration.
-    # TODO: support other database (e.g. TEAL, AMBER, etc, automatically.)
     if databases:
-        databasesettings(config,db_colors)
+        database_settings(config,db_colors)
 
     if test_runner and 'CI' in os.environ:
         # Enable test runner if found in CI environment.
@@ -18,7 +17,7 @@ def settings(config, *, db_colors=False, databases=True, test_runner=True, stati
 
     # Staticfiles configuration.
     if staticfiles:
-        staticsettings(config)
+        static_settings(config)
 
     if allowed_hosts:
         config['ALLOWED_HOSTS'] = ['*']
@@ -27,7 +26,7 @@ def settings(config, *, db_colors=False, databases=True, test_runner=True, stati
         # Set the Django setting from the environment variable.
         config['SECRET_KEY'] = os.environ['SECRET_KEY']
 
-def databasesettings(config, db_colors):
+def database_settings(config, db_colors):
     # Integrity check.
     if 'DATABASES' not in config:
         config['DATABASES'] = {'default': None}
@@ -36,7 +35,6 @@ def databasesettings(config, db_colors):
         
     if db_colors:
         # Support all Heroku databases.
-        # TODO: This appears to break TestRunner.
         for (env, url) in os.environ.items():
             if env.startswith('HEROKU_POSTGRESQL'):
                 db_color = env[len('HEROKU_POSTGRESQL_'):].split('_')[0]
@@ -50,7 +48,7 @@ def databasesettings(config, db_colors):
         if 'CI' in os.environ:
             config['DATABASES']['default']['TEST'] = config['DATABASES']['default']
 
-def staticsettings(config):
+def static_settings(config):
     config['STATIC_ROOT'] = os.path.join(config['BASE_DIR'], 'staticfiles')
     config['STATIC_URL'] = '/static/'
 
