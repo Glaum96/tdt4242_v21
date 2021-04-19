@@ -96,7 +96,6 @@ if is_prod:
 
 if 'DATABASE_URL' in os.environ:
     import dj_database_url
-    print("\n\n\n\n\nHEI\n\n\n\n\n\n")
     DATABASES = {'default': dj_database_url.config()}
 else:
     DATABASES = {

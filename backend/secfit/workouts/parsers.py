@@ -1,13 +1,9 @@
-"""Contains custom parsers for serializers from the workouts Django app
-"""
 import json
 from rest_framework import parsers
 
-# Thanks to https://stackoverflow.com/a/50514630
 class MultipartJsonParser(parsers.MultiPartParser):
-    """Parser for serializing multipart data containing both files and JSON.
-
-    This is currently unused.
+    """
+    Parser for serializing multipart data containing both files and JSON.
     """
 
     def parse(self, stream, media_type=None, parser_context=None):
@@ -22,8 +18,7 @@ class MultipartJsonParser(parsers.MultiPartParser):
         for key, value in result.data.items():
             if not isinstance(value, str):
                 data[key] = value
-                continue
-            if "{" in value or "[" in value:
+            elif "{" in value or "[" in value:
                 try:
                     data[key] = json.loads(value)
                 except ValueError:
